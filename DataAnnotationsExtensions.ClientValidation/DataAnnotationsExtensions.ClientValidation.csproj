@@ -45,6 +45,7 @@
     <Compile Include="Adapters\CreditCardAttributeAdapter.cs" />
     <Compile Include="Adapters\EmailAttributeAdapter.cs" />
     <Compile Include="Adapters\EqualToValidationAdapter.cs" />
+    <Compile Include="Adapters\FileExtensionsAttributeAdapter.cs" />
     <Compile Include="Adapters\UrlAttributeAdapter.cs" />
     <Compile Include="DataAnnotationsModelValidatorProviderExtensions.cs" />
     <Compile Include="Resources\ClientValidationResources.Designer.cs">
@@ -54,6 +55,7 @@
     </Compile>
     <Compile Include="Rules\ModelClientValidationCreditCardRule.cs" />
     <Compile Include="Rules\ModelClientValidationEmailRule.cs" />
+    <Compile Include="Rules\ModelClientValidationFileExtensionsRule.cs" />
     <Compile Include="Rules\ModelClientValidationUrlRule.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
