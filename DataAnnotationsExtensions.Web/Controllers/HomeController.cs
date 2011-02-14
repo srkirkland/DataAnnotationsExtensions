@@ -1,9 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
+﻿using System.Linq;
 using System.Web.Mvc;
-using DataAnnotationsExtensions.Core;
+using System.ComponentModel.DataAnnotations;
 
 namespace DataAnnotationsExtensions.Web.Controllers
 {
@@ -13,23 +10,12 @@ namespace DataAnnotationsExtensions.Web.Controllers
         {
             ViewBag.Message = "Welcome to ASP.NET MVC!";
 
-            return View();
-        }
+            var validationAttributeAssembly = typeof (EmailAttribute).Assembly;
+            var validationAttributes = validationAttributeAssembly.GetTypes().Where(x => x.IsSubclassOf(typeof (ValidationAttribute)));
 
-        public ActionResult Email()
-        {
-            return View(new EmailEntity());
-        }
+            validationAttributes.Select(x => new {x.Name, Controller = x.Name.Substring(0, x.Name.Length - "attribute".Length)});
 
-        [HttpPost]
-        public ActionResult Email(EmailEntity emailEntity)
-        {
-            if (!ModelState.IsValid)
-            {
-                return View(emailEntity);
-            }
-
-            return RedirectToAction("Index");
+            return View(validationAttributes);
         }
 
         public ActionResult About()

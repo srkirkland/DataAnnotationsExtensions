@@ -8,4 +8,11 @@ namespace DataAnnotationsExtensions.Core
         [Required]
         public string Email { get; set; }
     }
+
+    public class UrlEntity
+    {
+        [Url]
+        [Required]
+        public string Url { get; set; }
+    }
 }

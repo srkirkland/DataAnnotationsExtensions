@@ -1,23 +1,17 @@
 ﻿@model DataAnnotationsExtensions.Core.EmailEntity
 
 @{
-    ViewBag.Title = "Email";
+    ViewBag.Title = "Create";
 }
 
-<h2>Email</h2>
+<h2>Create</h2>
 
 @using (Html.BeginForm()) {
     @Html.ValidationSummary(true)
     <fieldset>
         <legend>EmailEntity</legend>
 
-        <div class="editor-label">
-            @Html.LabelFor(model => model.Email)
-        </div>
-        <div class="editor-field">
-            @Html.EditorFor(model => model.Email)
-            @Html.ValidationMessageFor(model => model.Email)
-        </div>
+        @Html.EditorForModel()
 
         <p>
             <input type="submit" value="Create" />
