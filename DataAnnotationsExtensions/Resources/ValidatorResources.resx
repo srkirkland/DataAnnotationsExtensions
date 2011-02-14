@@ -258,4 +258,10 @@
   <data name="Common_PropertyNotFound" xml:space="preserve">
     <value>The property {0}.{1} could not be found.</value>
   </data>
+  <data name="CompareAttribute_MustMatch" xml:space="preserve">
+    <value>'{0}' and '{1}' do not match.</value>
+  </data>
+  <data name="EqualTo_UnknownProperty" xml:space="preserve">
+    <value>Could not find a property named {0}.</value>
+  </data>
 </root>

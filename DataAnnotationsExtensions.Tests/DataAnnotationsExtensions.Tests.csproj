@@ -53,6 +53,7 @@
     <Compile Include="Controllers\HomeControllerTest.cs" />
     <Compile Include="ValidationAttributes\CreditCardAttributeTest.cs" />
     <Compile Include="ValidationAttributes\EmailAttributeTests.cs" />
+    <Compile Include="ValidationAttributes\EqualToAttributeTest.cs" />
     <Compile Include="ValidationAttributes\UrlAttributeTests.cs" />
   </ItemGroup>
   <ItemGroup>
