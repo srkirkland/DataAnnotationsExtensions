@@ -51,9 +51,10 @@
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Controllers\HomeControllerTest.cs" />
-    <Compile Include="ValidationAttributes\CreditCardAttributeTest.cs" />
+    <Compile Include="ValidationAttributes\CreditCardAttributeTests.cs" />
     <Compile Include="ValidationAttributes\EmailAttributeTests.cs" />
     <Compile Include="ValidationAttributes\EqualToAttributeTest.cs" />
+    <Compile Include="ValidationAttributes\FileExtensionsAttributeTests.cs" />
     <Compile Include="ValidationAttributes\UrlAttributeTests.cs" />
   </ItemGroup>
   <ItemGroup>

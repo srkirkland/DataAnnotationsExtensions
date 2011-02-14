@@ -3,7 +3,7 @@
 namespace DataAnnotationsExtensions.Tests.ValidationAttributes
 {
 	[TestClass]
-	public class CreditCardAttributeTest
+	public class CreditCardAttributeTests
 	{
 		[TestMethod]
 		public void IsValidTests()
