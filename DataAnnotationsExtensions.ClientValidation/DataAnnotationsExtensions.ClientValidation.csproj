@@ -44,8 +44,14 @@
   <ItemGroup>
     <Compile Include="Adapters\CreditCardAttributeAdapter.cs" />
     <Compile Include="Adapters\EmailAttributeAdapter.cs" />
+    <Compile Include="Adapters\EqualToValidationAdapter.cs" />
     <Compile Include="Adapters\UrlAttributeAdapter.cs" />
     <Compile Include="DataAnnotationsModelValidatorProviderExtensions.cs" />
+    <Compile Include="Resources\ClientValidationResources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ClientValidationResources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Rules\ModelClientValidationCreditCardRule.cs" />
     <Compile Include="Rules\ModelClientValidationEmailRule.cs" />
     <Compile Include="Rules\ModelClientValidationUrlRule.cs" />
@@ -56,6 +62,12 @@
       <Project>{FE938484-722F-40F6-AC72-3B8C8533CA54}</Project>
       <Name>DataAnnotationsExtensions</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\ClientValidationResources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>ClientValidationResources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
