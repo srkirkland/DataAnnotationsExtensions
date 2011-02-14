@@ -13,13 +13,13 @@ namespace DataAnnotationsExtensions.Tests.ValidationAttributes
         [TestMethod]
         public void DefaultExtensions()
         {
-            Assert.AreEqual("png,jpg,jpeg,gif", new FileExtensionsAttribute(null).Extensions);
+            Assert.AreEqual("png,jpg,jpeg,gif", new FileExtensionsAttribute().Extensions);
         }
 
         [TestMethod]
         public void IsValidWithNoArgumentTests()
         {
-            var attribute = new FileExtensionsAttribute(null);
+            var attribute = new FileExtensionsAttribute();
 
             Assert.IsTrue(attribute.IsValid(null));  // Optional values are always valid
             Assert.IsTrue(attribute.IsValid("foo.png"));

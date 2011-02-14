@@ -60,6 +60,7 @@
     <Compile Include="Controllers\CreditCardController.cs" />
     <Compile Include="Controllers\EmailController.cs" />
     <Compile Include="Controllers\EqualToController.cs" />
+    <Compile Include="Controllers\FileExtensionsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\UrlController.cs" />
     <Compile Include="Controllers\ValidationControllerBase.cs" />
@@ -150,6 +151,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\EqualTo\Create.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\FileExtensions\Create.cshtml" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />

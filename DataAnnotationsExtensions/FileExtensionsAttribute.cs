@@ -15,8 +15,8 @@ namespace DataAnnotationsExtensions
         /// <summary>
         /// Provide the allowed file extensions, seperated via "|" (or a comma, ","), defaults to "png|jpe?g|gif" 
         /// </summary>
-        public FileExtensionsAttribute(string allowedExtensions)
-            : base("upload")
+        public FileExtensionsAttribute(string allowedExtensions = "png,jpg,jpeg,gif")
+            : base("fileextension")
         {
             ErrorMessage = ValidatorResources.FileExtensionsAttribute_Invalid;
             
