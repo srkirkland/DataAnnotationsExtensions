@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using System.Web.Routing;
+using DataAnnotationsExtensions.ClientValidation;
 
 namespace DataAnnotationsExtensions.Web
 {
@@ -35,6 +36,8 @@ namespace DataAnnotationsExtensions.Web
 
             RegisterGlobalFilters(GlobalFilters.Filters);
             RegisterRoutes(RouteTable.Routes);
+
+            DataAnnotationsModelValidatorProviderExtensions.RegisterValidationExtensions();
         }
     }
 }

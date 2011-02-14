@@ -4,16 +4,16 @@ using DataAnnotationsExtensions.ClientValidation.Rules;
 
 namespace DataAnnotationsExtensions.ClientValidation.Adapters
 {
-    public class UrlAttributeAdapter : DataAnnotationsModelValidator<UrlAttribute>
+    public class EmailAttributeAdapter : DataAnnotationsModelValidator<EmailAttribute>
     {
-        public UrlAttributeAdapter(ModelMetadata metadata, ControllerContext context, UrlAttribute attribute)
+        public EmailAttributeAdapter(ModelMetadata metadata, ControllerContext context, EmailAttribute attribute)
             : base(metadata, context, attribute)
         {
         }
 
         public override IEnumerable<ModelClientValidationRule> GetClientValidationRules()
         {
-            return new[] { new ModelClientValidationUrlRule(ErrorMessage) };
+            return new[] { new ModelClientValidationEmailRule(ErrorMessage) };
         }
     }
 }

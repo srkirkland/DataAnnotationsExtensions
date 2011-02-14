@@ -61,7 +61,6 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\EmailEntity.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -116,11 +115,20 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\DataAnnotationsExtensions.ClientValidation\DataAnnotationsExtensions.ClientValidation.csproj">
+      <Project>{CE731EE1-C6D0-4183-803D-14729BBE2895}</Project>
+      <Name>DataAnnotationsExtensions.ClientValidation</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DataAnnotationsExtensions.Core\DataAnnotationsExtensions.Core.csproj">
+      <Project>{144683DA-A20C-4A69-9310-1E21FE38B67B}</Project>
+      <Name>DataAnnotationsExtensions.Core</Name>
+    </ProjectReference>
     <ProjectReference Include="..\DataAnnotationsExtensions\DataAnnotationsExtensions.csproj">
       <Project>{FE938484-722F-40F6-AC72-3B8C8533CA54}</Project>
       <Name>DataAnnotationsExtensions</Name>

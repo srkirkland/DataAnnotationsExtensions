@@ -1,5 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
-namespace DataAnnotationsExtensions.Web.Models
+
+namespace DataAnnotationsExtensions.Core
 {
     public class EmailEntity
     {
