@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using DataAnnotationsExtensions.Web.Models;
 
 namespace DataAnnotationsExtensions.Web.Controllers
 {
@@ -13,6 +14,22 @@ namespace DataAnnotationsExtensions.Web.Controllers
             ViewBag.Message = "Welcome to ASP.NET MVC!";
 
             return View();
+        }
+
+        public ActionResult Email()
+        {
+            return View(new EmailEntity());
+        }
+
+        [HttpPost]
+        public ActionResult Email(EmailEntity emailEntity)
+        {
+            if (!ModelState.IsValid)
+            {
+                return View(emailEntity);
+            }
+
+            return RedirectToAction("Index");
         }
 
         public ActionResult About()
