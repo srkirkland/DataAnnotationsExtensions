@@ -52,6 +52,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Controllers\HomeControllerTest.cs" />
     <Compile Include="ValidationAttributes\EmailAttributeTests.cs" />
+    <Compile Include="ValidationAttributes\UrlAttributeTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="App.config" />

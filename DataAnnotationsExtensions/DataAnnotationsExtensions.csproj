@@ -48,6 +48,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ValidatorResources.resx</DependentUpon>
     </Compile>
+    <Compile Include="UrlAttribute.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Resources\ValidatorResources.resx">
