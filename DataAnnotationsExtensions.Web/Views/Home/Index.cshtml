@@ -9,7 +9,7 @@
     To learn more about DataAnnotationsExtensions visit <a href="http://github.com/srkirkland" title="DataAnnotationsExtensions GitHub">the project site</a>.
 </p>
 <ul>
-    @foreach (var validationAttribute in Model.Select(x => new { x.Name, Controller = x.Name.Substring(0, x.Name.Length - "attribute".Length) }))
+    @foreach (var validationAttribute in Model.OrderBy(x=>x.Name).Select(x => new { x.Name, Controller = x.Name.Substring(0, x.Name.Length - "attribute".Length) }))
     { 
     <li>
         @Html.ActionLink(validationAttribute.Name, "Create", validationAttribute.Controller)
