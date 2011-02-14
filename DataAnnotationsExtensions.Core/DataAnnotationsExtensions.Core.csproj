@@ -41,8 +41,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CreditCardEntity.cs" />
     <Compile Include="EmailEntity.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UrlEntity.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DataAnnotationsExtensions\DataAnnotationsExtensions.csproj">

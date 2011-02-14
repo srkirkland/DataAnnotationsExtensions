@@ -2,10 +2,10 @@
 
 namespace DataAnnotationsExtensions.Core
 {
-    public class EmailEntity
+    public class CreditCardEntity
     {
-        [Email]
+        [CreditCard]
         [Required]
-        public string Email { get; set; }
+        public string CreditCard { get; set; }
     }
 }
