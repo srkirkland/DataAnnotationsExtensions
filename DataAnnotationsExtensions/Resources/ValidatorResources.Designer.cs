@@ -169,6 +169,15 @@ namespace DataAnnotationsExtensions.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to The field {0} should contain only digits.
+        /// </summary>
+        internal static string DigitsAttribute_Invalid {
+            get {
+                return ResourceManager.GetString("DigitsAttribute_Invalid", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Sample Item.
         /// </summary>
         internal static string DropDownList_SampleItem {
