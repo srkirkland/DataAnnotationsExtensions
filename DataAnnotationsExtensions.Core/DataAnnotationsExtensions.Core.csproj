@@ -45,6 +45,7 @@
     <Compile Include="EmailEntity.cs" />
     <Compile Include="EqualToEntity.cs" />
     <Compile Include="FileExtensionsEntity.cs" />
+    <Compile Include="NumericEntity.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UrlEntity.cs" />
   </ItemGroup>
