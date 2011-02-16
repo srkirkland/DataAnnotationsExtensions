@@ -457,6 +457,15 @@ namespace DataAnnotationsExtensions.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to The {0} field is not a valid number..
+        /// </summary>
+        internal static string NumericAttribute_Invalid {
+            get {
+                return ResourceManager.GetString("NumericAttribute_Invalid", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Error dispatching on controller {0}, conflicting actions matched: {1}..
         /// </summary>
         internal static string ResourceControllerFactory_ConflictingActions {

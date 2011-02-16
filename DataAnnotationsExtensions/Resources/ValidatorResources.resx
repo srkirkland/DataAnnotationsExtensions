@@ -264,4 +264,7 @@
   <data name="EqualTo_UnknownProperty" xml:space="preserve">
     <value>Could not find a property named {0}.</value>
   </data>
+	<data name="NumericAttribute_Invalid">
+		<value xml:space="preserve">The {0} field is not a valid number.</value>
+	</data>
 </root>
