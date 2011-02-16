@@ -42,6 +42,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CreditCardEntity.cs" />
+    <Compile Include="DigitsEntity.cs" />
     <Compile Include="EmailEntity.cs" />
     <Compile Include="EqualToEntity.cs" />
     <Compile Include="FileExtensionsEntity.cs" />
