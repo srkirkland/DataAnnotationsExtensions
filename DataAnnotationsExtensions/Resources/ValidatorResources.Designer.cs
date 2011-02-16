@@ -340,6 +340,24 @@ namespace DataAnnotationsExtensions.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to The field {0} must be less than or equal to {1}.
+        /// </summary>
+        internal static string MaxAttribute_Invalid {
+            get {
+                return ResourceManager.GetString("MaxAttribute_Invalid", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The field {0} must be greater than or equal to {1}.
+        /// </summary>
+        internal static string MinAttribute_Invalid {
+            get {
+                return ResourceManager.GetString("MinAttribute_Invalid", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to The value &apos;{0}&apos; is not valid for {1}..
         /// </summary>
         internal static string ModelBinderConfig_ValueInvalid {

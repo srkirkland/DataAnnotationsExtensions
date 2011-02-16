@@ -46,6 +46,7 @@
     <Compile Include="EmailAttribute.cs" />
     <Compile Include="EqualToAttribute.cs" />
     <Compile Include="FileExtensionsAttribute.cs" />
+    <Compile Include="MaxAttribute.cs" />
     <Compile Include="MinAttribute.cs" />
     <Compile Include="NumericAttribute.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

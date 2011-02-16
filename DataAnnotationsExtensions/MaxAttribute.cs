@@ -6,36 +6,38 @@ using DataAnnotationsExtensions.Resources;
 namespace DataAnnotationsExtensions
 {
     [AttributeUsage(AttributeTargets.Property, AllowMultiple = false)]
-    public class MinAttribute : DataTypeAttribute
+    public class MaxAttribute : DataTypeAttribute
     {
-        private readonly double _min;
-        
-        public MinAttribute(int min) : base("min")
+        private readonly double _max;
+
+        public MaxAttribute(int max)
+            : base("max")
         {
-            _min = min;
-            ErrorMessage = ValidatorResources.MinAttribute_Invalid;
+            _max = max;
+            ErrorMessage = ValidatorResources.MaxAttribute_Invalid;
         }
 
-        public MinAttribute(double min) : base("min")
+        public MaxAttribute(double max)
+            : base("max")
         {
-            _min = min;
-            ErrorMessage = ValidatorResources.MinAttribute_Invalid;
+            _max = max;
+            ErrorMessage = ValidatorResources.MaxAttribute_Invalid;
         }
 
         public override string FormatErrorMessage(string name)
         {
-            return String.Format(CultureInfo.CurrentCulture, ErrorMessageString, name, _min);
+            return String.Format(CultureInfo.CurrentCulture, ErrorMessageString, name, _max);
         }
 
         public override bool IsValid(object value)
         {
             if (value == null) return true;
-            
+
             double valueAsDouble;
 
             var isDouble = double.TryParse(Convert.ToString(value), NumberStyles.Any, NumberFormatInfo.InvariantInfo, out valueAsDouble);
 
-            return isDouble && valueAsDouble >= _min;
+            return isDouble && valueAsDouble <= _max;
         }
     }
 }

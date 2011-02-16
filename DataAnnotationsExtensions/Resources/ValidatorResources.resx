@@ -270,4 +270,10 @@
 	<data name="DigitsAttribute_Invalid">
 		<value xml:space="preserve">The field {0} should contain only digits</value>
 	</data>
+	<data name="MaxAttribute_Invalid">
+		<value xml:space="preserve">The field {0} must be less than or equal to {1}</value>
+	</data>
+	<data name="MinAttribute_Invalid">
+		<value xml:space="preserve">The field {0} must be greater than or equal to {1}</value>
+	</data>
 </root>
