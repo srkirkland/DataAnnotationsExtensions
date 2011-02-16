@@ -56,6 +56,7 @@
     <Compile Include="ValidationAttributes\EmailAttributeTests.cs" />
     <Compile Include="ValidationAttributes\EqualToAttributeTest.cs" />
     <Compile Include="ValidationAttributes\FileExtensionsAttributeTests.cs" />
+    <Compile Include="ValidationAttributes\MaxAttributeTests.cs" />
     <Compile Include="ValidationAttributes\MinAttributeTests.cs" />
     <Compile Include="ValidationAttributes\NumericAttributeTests.cs" />
     <Compile Include="ValidationAttributes\UrlAttributeTests.cs" />
