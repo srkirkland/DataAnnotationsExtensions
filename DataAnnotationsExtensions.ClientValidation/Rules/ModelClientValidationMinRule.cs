@@ -4,10 +4,11 @@ namespace DataAnnotationsExtensions.ClientValidation.Rules
 {
     public class ModelClientValidationMinRule : ModelClientValidationRule
     {
-        public ModelClientValidationMinRule(string errorMessage)
+        public ModelClientValidationMinRule(string errorMessage, object min)
         {
             ErrorMessage = errorMessage;
-            ValidationType = "min";
+            ValidationType = "range";
+            ValidationParameters["min"] = min;
         }
     }
 }

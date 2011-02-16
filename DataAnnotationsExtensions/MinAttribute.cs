@@ -8,6 +8,8 @@ namespace DataAnnotationsExtensions
     [AttributeUsage(AttributeTargets.Property, AllowMultiple = false)]
     public class MinAttribute : DataTypeAttribute
     {
+        public object Min { get { return _min; } }
+
         private readonly double _min;
         
         public MinAttribute(int min) : base("min")

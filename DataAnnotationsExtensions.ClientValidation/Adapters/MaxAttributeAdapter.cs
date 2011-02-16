@@ -13,7 +13,7 @@ namespace DataAnnotationsExtensions.ClientValidation.Adapters
 
         public override IEnumerable<ModelClientValidationRule> GetClientValidationRules()
         {
-            return new[] { new ModelClientValidationMaxRule(ErrorMessage) };
+            return new[] { new ModelClientValidationMaxRule(ErrorMessage, Attribute.Max) };
         }
     }
 }

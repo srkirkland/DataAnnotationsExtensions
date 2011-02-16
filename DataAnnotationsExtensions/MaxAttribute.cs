@@ -8,6 +8,8 @@ namespace DataAnnotationsExtensions
     [AttributeUsage(AttributeTargets.Property, AllowMultiple = false)]
     public class MaxAttribute : DataTypeAttribute
     {
+        public object Max { get { return _max; } }
+
         private readonly double _max;
 
         public MaxAttribute(int max)

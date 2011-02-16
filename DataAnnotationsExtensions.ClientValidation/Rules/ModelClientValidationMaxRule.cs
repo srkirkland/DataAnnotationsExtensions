@@ -4,10 +4,11 @@ namespace DataAnnotationsExtensions.ClientValidation.Rules
 {
     public class ModelClientValidationMaxRule : ModelClientValidationRule
     {
-        public ModelClientValidationMaxRule(string errorMessage)
+        public ModelClientValidationMaxRule(string errorMessage, object max)
         {
             ErrorMessage = errorMessage;
-            ValidationType = "max";
+            ValidationType = "range";
+            ValidationParameters["max"] = max;
         }
     }
 }
