@@ -63,6 +63,8 @@
     <Compile Include="Controllers\EqualToController.cs" />
     <Compile Include="Controllers\FileExtensionsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\MaxController.cs" />
+    <Compile Include="Controllers\MinController.cs" />
     <Compile Include="Controllers\NumericController.cs" />
     <Compile Include="Controllers\UrlController.cs" />
     <Compile Include="Controllers\ValidationControllerBase.cs" />
@@ -162,6 +164,12 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Digits\Create.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Min\Create.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Max\Create.cshtml" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
