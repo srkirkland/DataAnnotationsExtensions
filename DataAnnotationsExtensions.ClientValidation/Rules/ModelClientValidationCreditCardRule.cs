@@ -10,13 +10,4 @@ namespace DataAnnotationsExtensions.ClientValidation.Rules
             ValidationType = "creditcard";
         }
     }
-
-    public class ModelClientValidationNumericRule : ModelClientValidationRule
-    {
-        public ModelClientValidationNumericRule(string errorMessage)
-        {
-            ErrorMessage = errorMessage;
-            ValidationType = "number";
-        }
-    }
 }
