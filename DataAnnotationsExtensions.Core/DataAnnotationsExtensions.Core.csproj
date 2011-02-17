@@ -47,6 +47,7 @@
     <Compile Include="EmailEntity.cs" />
     <Compile Include="EqualToEntity.cs" />
     <Compile Include="FileExtensionsEntity.cs" />
+    <Compile Include="IntegerEntity.cs" />
     <Compile Include="MaxEntity.cs" />
     <Compile Include="MinEntity.cs" />
     <Compile Include="NumericEntity.cs" />
