@@ -7,7 +7,7 @@ namespace DataAnnotationsExtensions.Web.Controllers
         protected override void AddMessage()
         {
             Message =
-                "Both fields expect a date formatted string.  The DateAsString field shows server-side validation separate from data type checking";
+                "Both fields expect a date formatted string.  The DateAsString field shows server-side validation separate from data type checking.";
         }
     }
 }

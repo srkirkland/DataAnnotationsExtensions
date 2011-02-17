@@ -43,6 +43,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Adapters\CreditCardAttributeAdapter.cs" />
+    <Compile Include="Adapters\DateAttributeAdapter.cs" />
     <Compile Include="Adapters\DigitsAttributeAdapter.cs" />
     <Compile Include="Adapters\EmailAttributeAdapter.cs" />
     <Compile Include="Adapters\EqualToAttributeAdapter.cs" />
@@ -58,6 +59,7 @@
       <DependentUpon>ClientValidationResources.resx</DependentUpon>
     </Compile>
     <Compile Include="Rules\ModelClientValidationCreditCardRule.cs" />
+    <Compile Include="Rules\ModelClientValidationDateRule.cs" />
     <Compile Include="Rules\ModelClientValidationDigitsRule.cs" />
     <Compile Include="Rules\ModelClientValidationEmailRule.cs" />
     <Compile Include="Rules\ModelClientValidationFileExtensionsRule.cs" />
