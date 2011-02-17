@@ -1,7 +1,6 @@
 
 /* ==== Scroll down to find where to put your styles :) ==== */
 
-
 /* 	HTML5 Boilerplate
  
 	html5doctor.com Reset Stylesheet (Eric Meyer's Reset Reloaded + HTML5 baseline)
@@ -30,7 +29,7 @@ time, mark, audio, video {
 }                  
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section { 
-    display:block;
+	display:block;
 }
 nav ul { list-style:none; }
 blockquote, q { quotes:none; }
@@ -92,10 +91,10 @@ label, input[type=button], input[type=submit], button { cursor: pointer; }
 button, input, select, textarea { margin: 0; }
 input:valid, textarea:valid   {  }
 input:invalid, textarea:invalid { 
-      border-radius: 1px;
-    -moz-box-shadow: 0px 0px 5px red; 
+	  border-radius: 1px;
+	-moz-box-shadow: 0px 0px 5px red; 
  -webkit-box-shadow: 0px 0px 5px red; 
-         box-shadow: 0px 0px 5px red;
+		 box-shadow: 0px 0px 5px red;
 }
 .no-boxshadow input:invalid, 
 .no-boxshadow textarea:invalid { background-color: #f0dddd; }
@@ -135,11 +134,11 @@ button {  width: auto; overflow: visible; }
 
 
 /*
-    // ========================================== \\
+	// ========================================== \\
    ||                                              ||
    ||               Your styles !                  ||
    ||                                              ||
-    \\ ========================================== //
+	\\ ========================================== //
 */
 
 body{
@@ -158,7 +157,7 @@ body{
 	margin-bottom:50px;
 	-webkit-box-shadow:0 0 40px #AAA;
 	   -moz-box-shadow:0 0 40px #AAA;
-	        box-shadow:0 0 40px #AAA;
+			box-shadow:0 0 40px #AAA;
 }
 
 h2, h3{
@@ -170,7 +169,7 @@ h2, h3{
 }
 
 #title{
-	font-size: 80px;
+	font-size: 50px;
 	color:white;
 	padding-top:35px;
 	float:left;
@@ -211,7 +210,7 @@ aside{
 	margin-bottom:50px;
 	-webkit-box-shadow:0 0px 40px -10px #AAA;
 	   -moz-box-shadow:0 0px 40px -10px #AAA;
-	        box-shadow:0 0px 40px -10px #AAA;	
+			box-shadow:0 0px 40px -10px #AAA;	
 }
 
 #main p{
@@ -230,7 +229,7 @@ article header{
 	width:700px;
 	-webkit-box-shadow:0 45px 60px -60px #AAA;
 	   -moz-box-shadow:0 45px 60px -60px #AAA;
-	        box-shadow:0 45px 60px -60px #AAA;
+			box-shadow:0 45px 60px -60px #AAA;
 }
 
 
@@ -245,7 +244,7 @@ article header{
 	margin-bottom:50px;
 	-webkit-box-shadow:0px 15px 20px -10px #AAA;
 	   -moz-box-shadow:0px 15px 20px -10px #AAA;
-	        box-shadow:0px 15px 20px -10px #AAA;
+			box-shadow:0px 15px 20px -10px #AAA;
 	background-color:#bbb;
 	border-bottom:20px solid #aaa;
 	float:left;
@@ -283,8 +282,8 @@ article header{
 	width:660px;
 	-webkit-box-shadow:0 45px 60px -60px #AAA;
 	   -moz-box-shadow:0 45px 60px -60px #AAA;
-	        box-shadow:0 45px 60px -60px #AAA;
-	        padding-bottom:0px;
+			box-shadow:0 45px 60px -60px #AAA;
+			padding-bottom:0px;
 }
 
 
@@ -295,7 +294,7 @@ article header{
 	margin-top:50px;
 	-webkit-box-shadow:0 0 40px #AAA;
 	   -moz-box-shadow:0 0 40px #AAA;
-	        box-shadow:0 0 40px #AAA;
+			box-shadow:0 0 40px #AAA;
 }
 
 #footer-container footer{
