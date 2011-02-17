@@ -10,10 +10,15 @@ namespace DataAnnotationsExtensions.Web.Controllers
         {
             ViewBag.Message = "Welcome to ASP.NET MVC!";
 
-            var validationAttributeAssembly = typeof (EmailAttribute).Assembly;
-            var validationAttributes = validationAttributeAssembly.GetTypes().Where(x => x.IsSubclassOf(typeof (ValidationAttribute)));
+            return View();
+        }
 
-            validationAttributes.Select(x => new {x.Name, Controller = x.Name.Substring(0, x.Name.Length - "attribute".Length)});
+        public ActionResult Demos()
+        {
+            var validationAttributeAssembly = typeof(EmailAttribute).Assembly;
+            var validationAttributes = validationAttributeAssembly.GetTypes().Where(x => x.IsSubclassOf(typeof(ValidationAttribute)));
+
+            validationAttributes.Select(x => new { x.Name, Controller = x.Name.Substring(0, x.Name.Length - "attribute".Length) });
 
             return View(validationAttributes);
         }
