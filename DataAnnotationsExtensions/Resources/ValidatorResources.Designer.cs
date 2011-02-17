@@ -169,6 +169,15 @@ namespace DataAnnotationsExtensions.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to The field {0} is not a valid date.
+        /// </summary>
+        internal static string DateAttribute_Invalid {
+            get {
+                return ResourceManager.GetString("DateAttribute_Invalid", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to The field {0} should contain only digits.
         /// </summary>
         internal static string DigitsAttribute_Invalid {

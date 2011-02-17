@@ -276,4 +276,7 @@
 	<data name="MinAttribute_Invalid">
 		<value xml:space="preserve">The field {0} must be greater than or equal to {1}</value>
 	</data>
+	<data name="DateAttribute_Invalid">
+		<value xml:space="preserve">The field {0} is not a valid date</value>
+	</data>
 </root>
