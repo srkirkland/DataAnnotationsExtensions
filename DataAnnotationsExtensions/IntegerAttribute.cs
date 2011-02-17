@@ -6,12 +6,12 @@ using DataAnnotationsExtensions.Resources;
 namespace DataAnnotationsExtensions
 {
     [AttributeUsage(AttributeTargets.Property, AllowMultiple = false)]
-    public class DigitsAttribute : DataTypeAttribute
+    public class IntegerAttribute : DataTypeAttribute
     {
-        public DigitsAttribute()
-            : base("digits")
+        public IntegerAttribute()
+            : base("integer")
         {
-            ErrorMessage = ValidatorResources.DigitsAttribute_Invalid;
+            ErrorMessage = ValidatorResources.IntegerAttribute_Invalid;
         }
 
         public override bool IsValid(object value)
@@ -20,9 +20,7 @@ namespace DataAnnotationsExtensions
 
             int retNum;
 
-            var parseSuccess = int.TryParse(Convert.ToString(value), NumberStyles.Any, NumberFormatInfo.InvariantInfo, out retNum);
-
-            return parseSuccess && retNum >= 0;
+            return int.TryParse(Convert.ToString(value), NumberStyles.Any, NumberFormatInfo.InvariantInfo, out retNum);
         }
     }
 }

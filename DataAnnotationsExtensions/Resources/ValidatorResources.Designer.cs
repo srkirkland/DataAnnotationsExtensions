@@ -349,6 +349,15 @@ namespace DataAnnotationsExtensions.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to The field {0} should be a positive or negative non-decimal number..
+        /// </summary>
+        internal static string IntegerAttribute_Invalid {
+            get {
+                return ResourceManager.GetString("IntegerAttribute_Invalid", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to The field {0} must be less than or equal to {1}.
         /// </summary>
         internal static string MaxAttribute_Invalid {

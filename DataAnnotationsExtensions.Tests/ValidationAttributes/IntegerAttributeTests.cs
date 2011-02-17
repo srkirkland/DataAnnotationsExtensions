@@ -4,20 +4,20 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace DataAnnotationsExtensions.Tests.ValidationAttributes
 {
     [TestClass]
-    public class DigitsAttributeTests
+    public class IntegerAttributeTests
     {
         [TestMethod]
         public void IsValidTests()
         {
-            var attribute = new DigitsAttribute();
+            var attribute = new IntegerAttribute();
 
             Assert.IsTrue(attribute.IsValid(null)); // Don't check for required
             Assert.IsTrue(attribute.IsValid("1234"));
             Assert.IsTrue(attribute.IsValid("12345"));
             Assert.IsTrue(attribute.IsValid(14));
+            Assert.IsTrue(attribute.IsValid(-10)); //Allows negative numbers
+            Assert.IsTrue(attribute.IsValid("-50"));
             Assert.IsFalse(attribute.IsValid(14.50));
-            Assert.IsFalse(attribute.IsValid(-10)); //Does not allow negative numbers
-            Assert.IsFalse(attribute.IsValid("-50"));
             Assert.IsFalse(attribute.IsValid("12.90"));
             Assert.IsFalse(attribute.IsValid("1234.5"));
             Assert.IsFalse(attribute.IsValid("$3.50"));

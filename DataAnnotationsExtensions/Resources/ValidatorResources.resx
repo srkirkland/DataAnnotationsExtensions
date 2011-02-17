@@ -279,4 +279,7 @@
 	<data name="DateAttribute_Invalid">
 		<value xml:space="preserve">The field {0} is not a valid date</value>
 	</data>
+	<data name="IntegerAttribute_Invalid">
+		<value xml:space="preserve">The field {0} should be a positive or negative non-decimal number.</value>
+	</data>
 </root>
