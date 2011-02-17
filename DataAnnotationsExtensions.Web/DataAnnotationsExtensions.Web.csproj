@@ -80,8 +80,6 @@
     <Content Include="Css\style.css" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
-    <Content Include="index-initializr.html" />
-    <Content Include="index.html" />
     <Content Include="Images\logo.gif" />
     <Content Include="Scripts\jquery-1.5.js" />
     <Content Include="Scripts\jquery-1.5.min.js" />
