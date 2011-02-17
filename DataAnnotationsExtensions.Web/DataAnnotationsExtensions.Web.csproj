@@ -80,6 +80,9 @@
     <Content Include="Css\style.css" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
+    <Content Include="index-initializr.html" />
+    <Content Include="index.html" />
+    <Content Include="Images\logo.gif" />
     <Content Include="Scripts\jquery-1.5.js" />
     <Content Include="Scripts\jquery-1.5.min.js" />
     <Content Include="Scripts\jquery.validate-vsdoc.js" />
@@ -89,6 +92,7 @@
     <Content Include="Scripts\dd_belatedpng.js" />
     <Content Include="Scripts\modernizr-1.6.min.js" />
     <Content Include="Scripts\script.js" />
+    <Content Include="Images\sprites.png" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -175,6 +179,12 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Shared\_LayoutOld.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Shared\_Message.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\sprites.psd" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />

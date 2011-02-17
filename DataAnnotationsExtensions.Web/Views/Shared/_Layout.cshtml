@@ -24,46 +24,53 @@
 </head>
 <body>
 
-@Html.Partial("_Message")
+@*@Html.Partial("_Message")*@
 
-	<div id="header-container">
-		<header class="wrapper">
-			<h1 id="title">Data Annotations Extensions</h1>
-            <nav>
-				<ul>
-					<li><a href="#">Some</a></li>
-					<li><a href="#">navigation</a></li>
-					<li><a href="#">links</a></li>
-				</ul>
-			</nav>
-		</header>
-	</div>
-	<div id="main" class="wrapper">
-        
-		@RenderBody()
-		<aside>
-			<h3>Something aside</h3>
-		</aside>
-		<article>
-			<header>
-				<h2>Your article heading</h2>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sodales urna non odio egestas tempor. Nunc vel vehicula ante. Etiam bibendum iaculis libero, eget molestie nisl pharetra in. In semper consequat est, eu porta velit mollis nec. Curabitur posuere enim eget turpis feugiat tempor. Etiam ullamcorper lorem dapibus velit suscipit ultrices. Proin in est sed erat facilisis pharetra. Pellentesque auctor neque quis nisl lacinia id rutrum lacus venenatis.</p>
-			</header>
-			<h3>A smaller heading</h3>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sodales urna non odio egestas tempor. Nunc vel vehicula ante. Etiam bibendum iaculis libero, eget molestie nisl pharetra in. In semper consequat est, eu porta velit mollis nec. Curabitur posuere enim eget turpis feugiat tempor. Etiam ullamcorper lorem dapibus velit suscipit ultrices. Proin in est sed erat facilisis pharetra. Pellentesque auctor neque quis nisl lacinia id rutrum lacus venenatis.</p>	
-			<h3>A smaller heading</h3>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sodales urna non odio egestas tempor. Nunc vel vehicula ante. Etiam bibendum iaculis libero, eget molestie nisl pharetra in. In semper consequat est, eu porta velit mollis nec. Curabitur posuere enim eget turpis feugiat tempor. Etiam ullamcorper lorem dapibus velit suscipit ultrices. Proin in est sed erat facilisis pharetra. Pellentesque auctor neque quis nisl lacinia id rutrum lacus venenatis.</p>
-			<footer>
-			<h3>About the author</h3>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sodales urna non odio egestas tempor. Nunc vel vehicula ante. Etiam bibendum iaculis libero, eget molestie nisl pharetra in. In semper consequat est, eu porta velit mollis nec. Curabitur posuere enim eget turpis feugiat tempor.</p>
-			</footer>	
-		</article>
-	</div>
-	<div id="footer-container">
-		<footer class="wrapper">
-			<h3>A nice footer</h3>
-		</footer>
-	</div>
+<header>
+    <hgroup>
+        <h1>Ampersand Solutions</h1>
+        <h2>Very catchy Strapline</h2>
+    </hgroup>
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Example 1</a></li>
+            <li><a href="#">Example 2</a></li>
+            <li><a href="#">Example 3</a></li>
+        </ul>
+    </nav>
+    <a href="#" title="Ampersand Solutions homepage"><img src="@Url.Content("~/Images/logo.gif")" alt="Ampersand Solutions" /></a></header>
+
+<article>
+    @RenderBody()
+
+	<h1>Lorem ipsum dolor sit amet</h1>
+    <p>Integer dignissim nunc id justo tristique at ultrices leo ornare. Pellentesque eget justo mi, ut vulputate nulla. Vestibulum eget nibh orci, non ornare velit. Cras turpis lorem, tristique vel ultricies vel, bibendum sed dui. Nunc mollis interdum dolor id viverra. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Proin eget ante nisl. Suspendisse dignissim felis quis arcu commodo fringilla. Praesent condimentum lacinia mi, ac blandit purus auctor vitae.</p> 
+    <p>Donec vitae lorem quis dui ultrices hendrerit. Proin vel turpis eu justo rutrum ultricies eu at neque. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam eu felis quis justo consequat interdum et at lorem. Aenean nulla lacus, pulvinar quis tempus ut, rutrum vitae odio. Morbi a urna dui. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nunc commodo leo id arcu varius ut aliquet velit scelerisque. Suspendisse et dolor eget nunc adipiscing imperdiet.</p>
+    <h2>Curabitur fermentum</h2>
+    <p>Ut et nunc metus. Quisque nibh lorem, dictum vitae commodo vel, mattis id sem. Praesent ac justo ipsum. Proin iaculis metus eu urna venenatis commodo. Donec <a href="#">feugiat pharetra</a> elit sed tincidunt. Cras felis velit, ornare quis semper nec, cursus ut nisl. Ut scelerisque ullamcorper aliquet. Integer tortor felis, bibendum iaculis posuere quis, suscipit non nunc. Donec pretium accumsan lacus, eget rhoncus metus lobortis et.</p>
+    <p>Sed ut eros enim, gravida tristique mauris. Proin pellentesque, turpis vel placerat mollis, nulla leo iaculis mauris, quis dictum metus augue ac libero. Aenean scelerisque tellus eget magna vulputate nec fringilla urna imperdiet. Cras fringilla lorem vitae lectus vestibulum in tincidunt nulla pharetra. Phasellus et magna arcu, vel sagittis diam. Nulla eget turpis a nibh ornare accumsan. Praesent porta ultricies ligula nec pharetra. Nulla facilisi. Nunc blandit velit vel tellus lobortis dignissim. Pellentesque ornare fringilla sapien a sollicitudin. Praesent urna massa, cursus eu euismod eu, ornare eu dui. Sed pulvinar porttitor mi, iaculis aliquam risus mollis vel.</p>
+    <h3>Donec mattis</h3>
+    <p>Etiam porttitor libero ut dui adipiscing nec ullamcorper lectus egestas. Nullam massa lorem, posuere et interdum nec, tempor et erat. Etiam sagittis tellus non urna feugiat sed scelerisque quam suscipit. Etiam eget felis velit. Sed sagittis congue metus, quis pharetra est commodo id. Duis pulvinar, libero eget sollicitudin posuere, quam tellus rutrum justo, sit amet facilisis purus ipsum eu quam. Phasellus pharetra vehicula purus, sit amet auctor purus porta vitae. Maecenas accumsan blandit erat id tincidunt. Proin sit amet massa eu diam sagittis sodales ac et nunc. </p>
+</article>
+
+<section>
+	<h1>Categories</h1>
+    <ul>
+        <li><a href="#">example 1 </a></li>
+        <li><a href="#">example 2 </a></li>
+        <li><a href="#">example 3 </a></li>
+        <li><a href="#">example 4 </a></li>
+        <li><a href="#">example 5 </a></li>
+        <li><a href="#">example 6 </a></li>
+        <li><a href="#">example 7 </a></li>
+        <li><a href="#">example 8 </a></li>
+    </ul>
+</section>
+
+<footer>
+	<p>&copy; 2010 Ampersand Solutions - <a href="#">Sitemap</a> | <a href="#">Privacy policy</a> almost <a href="http://validator.w3.org/check?uri=http://www.webdezign.co.uk/blog/html5-examples/2col/">valid HTML5</a> and <a href="http://jigsaw.w3.org/css-validator/validator?uri=http://www.webdezign.co.uk/blog/html5-examples/2col/">valid <abbr title="Cascading Style Sheet">CSS</abbr>3</a> design by <a href="http://www.webdezign.co.uk" title="web design london">Webdezign</a></p>
+</footer>
 	
 @*	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
 	<script>	    !window.jQuery && document.write(unescape('%3Cscript src="Scripts/jquery-1.6.min.js"%3E%3C/script%3E'))</script>*@
