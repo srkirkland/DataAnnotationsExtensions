@@ -1,4 +1,5 @@
-﻿using System.Web.Mvc;
+﻿using System.Text.RegularExpressions;
+using System.Web.Mvc;
 
 namespace DataAnnotationsExtensions.ClientValidation.Rules
 {

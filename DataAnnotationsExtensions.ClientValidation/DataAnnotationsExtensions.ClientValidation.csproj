@@ -63,6 +63,7 @@
     <Compile Include="Rules\ModelClientValidationDigitsRule.cs" />
     <Compile Include="Rules\ModelClientValidationEmailRule.cs" />
     <Compile Include="Rules\ModelClientValidationFileExtensionsRule.cs" />
+    <Compile Include="Rules\ModelClientValidationIntegerRule.cs" />
     <Compile Include="Rules\ModelClientValidationMaxRule.cs" />
     <Compile Include="Rules\ModelClientValidationMinRule.cs" />
     <Compile Include="Rules\ModelClientValidationNumericRule.cs" />
