@@ -306,6 +306,12 @@ article h2, article h3, article h4, article h5, article h6  {
 	color:#c17086;
 }
 
+article li
+{
+    padding:3px 1%;
+	/*border-bottom:1px solid #e7e2d7;*/
+}
+
 footer {
 	display:block;
 	clear:both !important;
@@ -314,6 +320,58 @@ footer {
 
 footer a {
 	margin:0px 5px;
+}
+
+fieldset 
+{
+    border:1px solid #ddd;
+    padding:0 1.4em 1.4em 1.4em;
+    margin:0 0 1.5em 0;
+}
+
+legend 
+{
+    font-size:1.2em;
+    font-weight: bold;
+}
+
+.editor-label 
+{
+    margin: 1em 0 0 0;
+}
+
+.editor-field 
+{
+    margin:0.5em 0 0 0;
+}
+
+/* Styles for validation helpers
+-----------------------------------------------------------*/
+.field-validation-error
+{
+    color: #ff0000;
+}
+
+.field-validation-valid
+{
+    display: none;
+}
+
+.input-validation-error
+{
+    border: 1px solid #ff0000;
+    background-color: #ffeeee;
+}
+
+.validation-summary-errors
+{
+    font-weight: bold;
+    color: #ff0000;
+}
+
+.validation-summary-valid
+{
+    display: none;
 }
 
 
