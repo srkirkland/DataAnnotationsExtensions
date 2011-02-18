@@ -23,6 +23,11 @@ namespace DataAnnotationsExtensions.Web.Controllers
             return View();
         }
 
+        public ActionResult Wiki()
+        {
+            return View();
+        }
+
         [ChildActionOnly]
         public ActionResult AttributeList()
         {

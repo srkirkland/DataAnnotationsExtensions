@@ -296,7 +296,8 @@ article h2, article h3, article h4, article h5, article h6  {
 	text-shadow:0 1px 0 #913951;
 }
 
-article p:first-of-type {
+.article-intro
+{
 	font-family:Helvetica, Arial, serif;
 	text-transform:uppercase;
 	border-top:1px dotted #968765;
