@@ -13,14 +13,20 @@ namespace DataAnnotationsExtensions.Web.Controllers
             return View();
         }
 
-        public ActionResult Demos()
+        [ChildActionOnly]
+        public ActionResult AttributeList()
         {
             var validationAttributeAssembly = typeof(EmailAttribute).Assembly;
             var validationAttributes = validationAttributeAssembly.GetTypes().Where(x => x.IsSubclassOf(typeof(ValidationAttribute)));
 
             validationAttributes.Select(x => new { x.Name, Controller = x.Name.Substring(0, x.Name.Length - "attribute".Length) });
 
-            return View(validationAttributes);
+            return PartialView("_AttributeList", validationAttributes);
+        }
+
+        public ActionResult Demos()
+        {
+            return View();
         }
 
         public ActionResult About()

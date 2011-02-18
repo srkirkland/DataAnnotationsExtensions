@@ -58,16 +58,7 @@
 <section>
 	<h1>Validators</h1>
     <p>Click below to see a validator in action</p>
-    <ul>
-        <li><a href="#">example 1 </a></li>
-        <li><a href="#">example 2 </a></li>
-        <li><a href="#">example 3 </a></li>
-        <li><a href="#">example 4 </a></li>
-        <li><a href="#">example 5 </a></li>
-        <li><a href="#">example 6 </a></li>
-        <li><a href="#">example 7 </a></li>
-        <li><a href="#">example 8 </a></li>
-    </ul>
+    @{Html.RenderAction("AttributeList", "Home", null);}
 </section>
 
 <footer>
