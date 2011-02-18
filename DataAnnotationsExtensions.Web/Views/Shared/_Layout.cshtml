@@ -33,8 +33,8 @@
     </hgroup>
     <nav>
         <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Demos</a></li>
+            <li>@Html.ActionLink("Home", "Index", "Home")</li>
+            <li>@Html.ActionLink("Demos", "Demos", "Home")</li>
             <li><a href="#">Download</a></li>
             <li><a href="#">Wiki</a></li>
         </ul>
@@ -42,6 +42,7 @@
     <a href="#" title="Ampersand Solutions homepage"><img src="@Url.Content("~/Images/logo.gif")" alt="Ampersand Solutions" /></a></header>
 
 <article>
+    @Html.Partial("_Message")
     @RenderBody()
 
 	@*<h1>Lorem ipsum dolor sit amet</h1>
@@ -55,7 +56,8 @@
 </article>
 
 <section>
-	<h1>Categories</h1>
+	<h1>Validators</h1>
+    <p>Click below to see a validator in action</p>
     <ul>
         <li><a href="#">example 1 </a></li>
         <li><a href="#">example 2 </a></li>
@@ -69,7 +71,7 @@
 </section>
 
 <footer>
-	<p>&copy; 2010 Ampersand Solutions - <a href="#">Sitemap</a> | <a href="#">Privacy policy</a> almost <a href="http://validator.w3.org/check?uri=http://www.webdezign.co.uk/blog/html5-examples/2col/">valid HTML5</a> and <a href="http://jigsaw.w3.org/css-validator/validator?uri=http://www.webdezign.co.uk/blog/html5-examples/2col/">valid <abbr title="Cascading Style Sheet">CSS</abbr>3</a> design by <a href="http://www.webdezign.co.uk" title="web design london">Webdezign</a></p>
+	<p>&copy; 2011 Scott Kirkland - Might one day be... <a href="http://validator.w3.org/check?uri=http://dataannotationsextensions.apphb.com">valid HTML5</a> and <a href="http://jigsaw.w3.org/css-validator/validator?uri=http://dataannotationsextensions.apphb.com">valid <abbr title="Cascading Style Sheet">CSS</abbr>3</a></p>
 </footer>
 	
 @*	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
