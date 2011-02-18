@@ -12,6 +12,16 @@ namespace DataAnnotationsExtensions.Web.Controllers
 
             return View();
         }
+ 
+        public ActionResult Demos()
+        {
+            return View();
+        }
+
+        public ActionResult Download()
+        {
+            return View();
+        }
 
         [ChildActionOnly]
         public ActionResult AttributeList()
@@ -24,10 +34,6 @@ namespace DataAnnotationsExtensions.Web.Controllers
             return PartialView("_AttributeList", validationAttributes);
         }
 
-        public ActionResult Demos()
-        {
-            return View();
-        }
 
         public ActionResult About()
         {

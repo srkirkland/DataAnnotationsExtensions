@@ -184,6 +184,7 @@
   <ItemGroup>
     <None Include="Images\sprites.psd" />
     <Content Include="Views\Home\_AttributeList.cshtml" />
+    <Content Include="Views\Home\Download.cshtml" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
