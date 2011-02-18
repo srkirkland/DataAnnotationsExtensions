@@ -25,7 +25,7 @@ namespace DataAnnotationsExtensions.Web.Controllers
             }
 
             TempData["Message"] = "Entity Saved Successfully";
-            return RedirectToAction("Index", "Home");
+            return RedirectToAction("Demos", "Home");
         }
     }
 }
