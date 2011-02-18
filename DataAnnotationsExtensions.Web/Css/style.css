@@ -345,6 +345,14 @@ legend
     margin:0.5em 0 0 0;
 }
 
+.info{
+border:solid 1px #DEDEDE;
+background:#EFEFEF;
+color:#222222;
+padding:4px;
+text-align:center;
+}
+
 /* Styles for validation helpers
 -----------------------------------------------------------*/
 .field-validation-error
@@ -373,8 +381,6 @@ legend
 {
     display: none;
 }
-
-
 
 /*
  *  CSS3 Media queries
