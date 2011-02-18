@@ -146,7 +146,7 @@ body {
 	background:#fbfdf6;
 	font-family:"Myriad Pro", Myriad, Helvetica, Arial, sans-serif;
 	font-size:90%;
-	color:#968765;
+	color:#000000;
 	margin:20px auto;
 	text-align:center;
 	line-height:1.4em;
@@ -164,7 +164,7 @@ h1, h2, h3, h4, h5, h6 {
 a:link, a:visited {
 	font-family:georgia, times, serif;
 	font-weight:bold;
-	color:#c17086;
+	color:#990000;
 	text-decoration:none;
 	border-bottom:1px solid #91476c;
 	font-size:.8em;
