@@ -13,6 +13,14 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAnnotationsExtensions.C
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAnnotationsExtensions.NuGet", "DataAnnotationsExtensions.NuGet\DataAnnotationsExtensions.NuGet.csproj", "{5700F8A2-D2CB-4797-8513-61164DCC3A55}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Build", "Build", "{0FB0F3C0-B85B-4EBB-877C-A604F9AC7125}"
+	ProjectSection(SolutionItems) = preProject
+		Build.cmd = Build.cmd
+		Build\Build.proj = Build\Build.proj
+		Build\Build.tasks = Build\Build.tasks
+		Build\CommonAssemblyInfo.cs = Build\CommonAssemblyInfo.cs
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

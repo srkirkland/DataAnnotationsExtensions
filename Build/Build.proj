@@ -5,6 +5,7 @@
         <Configuration Condition="'$(Configuration)' == ''">Release</Configuration>
         <ProjectRoot>$(MSBuildProjectDirectory)\..</ProjectRoot>
         <ArtifactDropDirectory>$(MSBuildProjectDirectory)\artifacts</ArtifactDropDirectory>
+        <NuGetBuildDirectory>$(ProjectRoot)\DataAnnotationsExtensions.NuGet\bin\Release</NuGetBuildDirectory>
     </PropertyGroup>
 
     <ItemGroup>
@@ -33,7 +34,7 @@
 
     <Target Name="CopyAssemblyOutputToArtifactDropDirectory">
         <ItemGroup>
-            <AssemblyOutputItems Exclude="$(AssemblyBuildDirectory)\**\DataAnnotationsExtensions.*.pdb" Include="$(AssemblyBuildDirectory)\**\DataAnnotationsExtensions.*.dll" />
+            <AssemblyOutputItems Exclude="$(NuGetBuildDirectory)\**\DataAnnotationsExtensions.*.pdb" Include="$(NuGetBuildDirectory)\**\DataAnnotationsExtensions*.dll" />
         </ItemGroup>
         <Message Text="Copying the Assemblies to $(ArtifactDropDirectory)" />
         <Copy ContinueOnError="false" SourceFiles="@(AssemblyOutputItems)" DestinationFiles="@(AssemblyOutputItems ->'$(ArtifactDropDirectory)\%(RecursiveDir)%(Filename)%(Extension)')" />
