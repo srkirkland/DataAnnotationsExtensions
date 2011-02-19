@@ -2,7 +2,7 @@
 <package xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <metadata xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
     <id>DataAnnotationsExtensions-MVC3</id>
-    <version>0.1.0</version>
+    <version>0.1.0.0</version>
     <authors>Scott Kirkland</authors>
     <owners>Scott Kirkland</owners>    
     <licenseUrl>https://github.com/srkirkland/DataAnnotationsExtensions/raw/master/LICENSE.txt</licenseUrl>
@@ -12,7 +12,12 @@
     <description>Validation attributes that extend Data Annotations and provide integrated server and client side validation.</description>
     <tags>ASP.NET Validation MVC</tags>
     <dependencies>
+        <dependency id="DataAnnotationsExtensions" version="0.1.0.0" />
         <dependency id="WebActivator" version="1.1" />
     </dependencies>
   </metadata>
+  <files xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+      <file src="../../artifacts/DataAnnotationsExtensions.ClientValidation.dll" target="lib\NETFramework40" />
+      <file src="Content/AppStart_RegisterClientValidationExtensions.cs.pp" target="content" />
+  </files>
 </package>
