@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAnnotationsExtensions.C
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAnnotationsExtensions.ClientValidation", "DataAnnotationsExtensions.ClientValidation\DataAnnotationsExtensions.ClientValidation.csproj", "{CE731EE1-C6D0-4183-803D-14729BBE2895}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAnnotationsExtensions.NuGet", "DataAnnotationsExtensions.NuGet\DataAnnotationsExtensions.NuGet.csproj", "{5700F8A2-D2CB-4797-8513-61164DCC3A55}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -37,6 +39,10 @@ Global
 		{CE731EE1-C6D0-4183-803D-14729BBE2895}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CE731EE1-C6D0-4183-803D-14729BBE2895}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CE731EE1-C6D0-4183-803D-14729BBE2895}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5700F8A2-D2CB-4797-8513-61164DCC3A55}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5700F8A2-D2CB-4797-8513-61164DCC3A55}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5700F8A2-D2CB-4797-8513-61164DCC3A55}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5700F8A2-D2CB-4797-8513-61164DCC3A55}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

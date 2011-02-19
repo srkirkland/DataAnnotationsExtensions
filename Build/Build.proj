@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Go" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <Import Project="$(MSBuildProjectDirectory)\Build.tasks" />
+    <PropertyGroup>
+        <Configuration Condition="'$(Configuration)' == ''">Release</Configuration>
+        <ProjectRoot>$(MSBuildProjectDirectory)\..</ProjectRoot>
+        <ArtifactDropDirectory>$(MSBuildProjectDirectory)\artifacts</ArtifactDropDirectory>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <RegexTransform Include="$(ProjectRoot)\Build\CommonAssemblyInfo.cs">
+            <Find>(?&lt;major&gt;\d+)\.(?&lt;minor&gt;\d+)\.\d+\.(?&lt;revision&gt;\d+)</Find>
+            <ReplaceWith>$(BUILD_NUMBER)</ReplaceWith>
+        </RegexTransform>
+    </ItemGroup>
+
+    <Target Name="Go" DependsOnTargets="UpdateAssemblyVersion; Build; CreateDropDirectories; CopyAssemblyOutputToArtifactDropDirectory">
+    </Target>
+
+    <Target Name="UpdateAssemblyVersion" Condition="'$(BUILD_NUMBER)' != ''">
+        <RegexTransform Items="@(RegexTransform)" />
+    </Target>
+    
+    <Target Name="Build">
+        <MSBuild Projects="$(ProjectRoot)\DataAnnotationsExtensions.sln" Targets="Build" Properties="EnableCodeAnalysis=true" />
+    </Target>
+
+    <Target Name="CreateDropDirectories">
+        <!--<Message Text="Making the output directories for the compiled output at '$(DropDirectory)'." />-->
+        <RemoveDir Directories="$(ArtifactDropDirectory)" Condition="Exists('$(ArtifactDropDirectory)')" ContinueOnError="True" />
+        <MakeDir Directories="$(ArtifactDropDirectory)" Condition="!Exists('$(ArtifactDropDirectory)')" />
+    </Target>
+
+    <Target Name="CopyAssemblyOutputToArtifactDropDirectory">
+        <ItemGroup>
+            <AssemblyOutputItems Exclude="$(AssemblyBuildDirectory)\**\DataAnnotationsExtensions.*.pdb" Include="$(AssemblyBuildDirectory)\**\DataAnnotationsExtensions.*.dll" />
+        </ItemGroup>
+        <Message Text="Copying the Assemblies to $(ArtifactDropDirectory)" />
+        <Copy ContinueOnError="false" SourceFiles="@(AssemblyOutputItems)" DestinationFiles="@(AssemblyOutputItems ->'$(ArtifactDropDirectory)\%(RecursiveDir)%(Filename)%(Extension)')" />
+        <!--<Delete Files="$(ArtifactDropDirectory)\UCDArch.ReferenceLinker.dll" />-->
+    </Target>
+</Project>
