@@ -83,6 +83,7 @@
     <Content Include="Css\style.css" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
+    <Content Include="Images\CheckIcon.png" />
     <Content Include="Images\CheckMark.png" />
     <Content Include="Images\forkme.png" />
     <Content Include="Images\logo.gif" />
