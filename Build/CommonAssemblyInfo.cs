@@ -4,7 +4,8 @@ using System.Runtime.InteropServices;
 
 [assembly: AssemblyCompany("Scott Kirkland")]
 [assembly: AssemblyProduct("Data Annotations Extensions")]
-[assembly: AssemblyCopyright("Scott Kirkland")]
+[assembly: AssemblyCopyright("Copyright � Scott Kirkland 2011")]
+
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyTrademark("")]
 
