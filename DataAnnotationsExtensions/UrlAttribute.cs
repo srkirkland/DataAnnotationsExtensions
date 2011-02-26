@@ -13,7 +13,16 @@ namespace DataAnnotationsExtensions
         public UrlAttribute()
             : base(DataType.Url)
         {
-            ErrorMessage = ValidatorResources.UrlAttribute_Invalid;
+        }
+
+        public override string FormatErrorMessage(string name)
+        {
+            if (ErrorMessage == null && ErrorMessageResourceName == null)
+            {
+                ErrorMessage = ValidatorResources.UrlAttribute_Invalid;
+            }
+
+            return base.FormatErrorMessage(name);
         }
 
         public override bool IsValid(object value)

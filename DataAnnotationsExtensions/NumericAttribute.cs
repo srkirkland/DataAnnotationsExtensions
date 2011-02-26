@@ -10,7 +10,16 @@ namespace DataAnnotationsExtensions
     {
         public NumericAttribute() : base("numeric")
         {
-            ErrorMessage = ValidatorResources.NumericAttribute_Invalid;
+        }
+
+        public override string FormatErrorMessage(string name)
+        {
+            if (ErrorMessage == null && ErrorMessageResourceName == null)
+            {
+                ErrorMessage = ValidatorResources.NumericAttribute_Invalid;
+            }
+
+            return base.FormatErrorMessage(name);
         }
 
         public override bool IsValid(object value)

@@ -11,7 +11,16 @@ namespace DataAnnotationsExtensions
         public CreditCardAttribute()
             : base("creditcard")
         {
-            ErrorMessage = ValidatorResources.CreditCardAttribute_Invalid;
+        }
+
+        public override string FormatErrorMessage(string name)
+        {
+            if (ErrorMessage == null && ErrorMessageResourceName == null)
+            {
+                ErrorMessage = ValidatorResources.CreditCardAttribute_Invalid;
+            }
+
+            return base.FormatErrorMessage(name);
         }
 
         public override bool IsValid(object value)

@@ -11,7 +11,16 @@ namespace DataAnnotationsExtensions
         public DateAttribute()
             : base(DataType.Date)
         {
-            ErrorMessage = ValidatorResources.DateAttribute_Invalid;
+        }
+
+        public override string FormatErrorMessage(string name)
+        {
+            if (ErrorMessage == null && ErrorMessageResourceName == null)
+            {
+                ErrorMessage = ValidatorResources.DateAttribute_Invalid;
+            }
+
+            return base.FormatErrorMessage(name);
         }
 
         public override bool IsValid(object value)

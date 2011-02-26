@@ -13,7 +13,16 @@ namespace DataAnnotationsExtensions
         public EmailAttribute()
             : base(DataType.EmailAddress)
         {
-            ErrorMessage = ValidatorResources.EmailAddressAttribute_Invalid;
+        }
+
+        public override string FormatErrorMessage(string name)
+        {
+            if (ErrorMessage == null && ErrorMessageResourceName == null)
+            {
+                ErrorMessage = ValidatorResources.EmailAddressAttribute_Invalid;
+            }
+
+            return base.FormatErrorMessage(name);
         }
 
         public override bool IsValid(object value)
