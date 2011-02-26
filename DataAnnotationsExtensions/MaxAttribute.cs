@@ -16,18 +16,21 @@ namespace DataAnnotationsExtensions
             : base("max")
         {
             _max = max;
-            ErrorMessage = ValidatorResources.MaxAttribute_Invalid;
         }
 
         public MaxAttribute(double max)
             : base("max")
         {
             _max = max;
-            ErrorMessage = ValidatorResources.MaxAttribute_Invalid;
         }
 
         public override string FormatErrorMessage(string name)
         {
+            if (ErrorMessage == null && ErrorMessageResourceName == null)
+            {
+                ErrorMessage = ValidatorResources.MaxAttribute_Invalid;
+            }
+
             return String.Format(CultureInfo.CurrentCulture, ErrorMessageString, name, _max);
         }
 

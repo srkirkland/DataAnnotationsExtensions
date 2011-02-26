@@ -18,13 +18,16 @@ namespace DataAnnotationsExtensions
         public FileExtensionsAttribute(string allowedExtensions = "png,jpg,jpeg,gif")
             : base("fileextension")
         {
-            ErrorMessage = ValidatorResources.FileExtensionsAttribute_Invalid;
-            
             Extensions = string.IsNullOrWhiteSpace(allowedExtensions) ? "png,jpg,jpeg,gif" : allowedExtensions.Replace("|", ",").Replace(" ", "");
         }
         
         public override string FormatErrorMessage(string name)
         {
+            if (ErrorMessage == null && ErrorMessageResourceName == null)
+            {
+                ErrorMessage = ValidatorResources.FileExtensionsAttribute_Invalid;
+            }
+
             return String.Format(CultureInfo.CurrentCulture, ErrorMessageString, name, Extensions);
         }
 

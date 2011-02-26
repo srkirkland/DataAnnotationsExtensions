@@ -16,7 +16,6 @@ namespace DataAnnotationsExtensions
     public class EqualToAttribute : ValidationAttribute
     {
         public EqualToAttribute(string otherProperty)
-            : base(ValidatorResources.CompareAttribute_MustMatch)
         {
             if (otherProperty == null)
             {
@@ -29,6 +28,11 @@ namespace DataAnnotationsExtensions
 
         public override string FormatErrorMessage(string name)
         {
+            if (ErrorMessage == null && ErrorMessageResourceName == null)
+            {
+                ErrorMessage = ValidatorResources.CompareAttribute_MustMatch;
+            }
+
             return String.Format(CultureInfo.CurrentCulture, ErrorMessageString, name, OtherProperty);
         }
 

@@ -15,17 +15,20 @@ namespace DataAnnotationsExtensions
         public MinAttribute(int min) : base("min")
         {
             _min = min;
-            ErrorMessage = ValidatorResources.MinAttribute_Invalid;
         }
 
         public MinAttribute(double min) : base("min")
         {
             _min = min;
-            ErrorMessage = ValidatorResources.MinAttribute_Invalid;
         }
 
         public override string FormatErrorMessage(string name)
         {
+            if (ErrorMessage == null && ErrorMessageResourceName == null)
+            {
+                ErrorMessage = ValidatorResources.MinAttribute_Invalid;
+            }
+
             return String.Format(CultureInfo.CurrentCulture, ErrorMessageString, name, _min);
         }
 
