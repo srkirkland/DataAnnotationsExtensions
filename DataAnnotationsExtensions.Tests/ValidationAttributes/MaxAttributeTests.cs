@@ -1,4 +1,5 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using System.ComponentModel.DataAnnotations;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace DataAnnotationsExtensions.Tests.ValidationAttributes
 {
@@ -45,6 +46,33 @@ namespace DataAnnotationsExtensions.Tests.ValidationAttributes
             Assert.IsFalse(attribute.IsValid("100.42"));
             Assert.IsFalse(attribute.IsValid("INVALID STRING"));
             
+        }
+
+        [TestMethod]
+        public void ErrorResourcesTest()
+        {
+            var attribute = new MaxAttribute(1);
+            attribute.ErrorMessageResourceName = "ErrorMessage";
+            attribute.ErrorMessageResourceType = typeof(ErrorResources);
+
+            const string invalidValue = "a";
+
+            var result = attribute.GetValidationResult(invalidValue, new ValidationContext(0, null, null));
+
+            Assert.AreEqual(ErrorResources.ErrorMessage, result.ErrorMessage);
+        }
+
+        [TestMethod]
+        public void ErrorMessageTest()
+        {
+            var attribute = new MaxAttribute(1);
+            attribute.ErrorMessage = "SampleErrorMessage";
+
+            const string invalidValue = "a";
+
+            var result = attribute.GetValidationResult(invalidValue, new ValidationContext(0, null, null));
+
+            Assert.AreEqual("SampleErrorMessage", result.ErrorMessage);
         }
     }
 }

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.ComponentModel.DataAnnotations;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace DataAnnotationsExtensions.Tests.ValidationAttributes
@@ -24,6 +25,33 @@ namespace DataAnnotationsExtensions.Tests.ValidationAttributes
             Assert.IsFalse(attribute.IsValid("12abc"));
             Assert.IsFalse(attribute.IsValid(DateTime.Now));
             Assert.IsFalse(attribute.IsValid("fourteen"));
+        }
+
+        [TestMethod]
+        public void ErrorResourcesTest()
+        {
+            var attribute = new DigitsAttribute();
+            attribute.ErrorMessageResourceName = "ErrorMessage";
+            attribute.ErrorMessageResourceType = typeof(ErrorResources);
+
+            const string invalidValue = "a";
+
+            var result = attribute.GetValidationResult(invalidValue, new ValidationContext(0, null, null));
+
+            Assert.AreEqual(ErrorResources.ErrorMessage, result.ErrorMessage);
+        }
+
+        [TestMethod]
+        public void ErrorMessageTest()
+        {
+            var attribute = new DigitsAttribute();
+            attribute.ErrorMessage = "SampleErrorMessage";
+
+            const string invalidValue = "a";
+
+            var result = attribute.GetValidationResult(invalidValue, new ValidationContext(0, null, null));
+
+            Assert.AreEqual("SampleErrorMessage", result.ErrorMessage);
         }
     }
 }

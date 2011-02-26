@@ -1,4 +1,5 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using System.ComponentModel.DataAnnotations;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace DataAnnotationsExtensions.Tests.ValidationAttributes
 {
@@ -26,5 +27,32 @@ namespace DataAnnotationsExtensions.Tests.ValidationAttributes
 			Assert.IsFalse(attribute.IsValid("4408 0412 3456 7890"));
 			Assert.IsFalse(attribute.IsValid(0));                    // Non-string
 		}
+
+        [TestMethod]
+        public void ErrorResourcesTest()
+        {
+            var attribute = new CreditCardAttribute();
+            attribute.ErrorMessageResourceName = "ErrorMessage";
+            attribute.ErrorMessageResourceType = typeof (ErrorResources);
+
+            const int invalidValue = 0;
+
+            var result = attribute.GetValidationResult(invalidValue, new ValidationContext(0, null, null));
+
+            Assert.AreEqual(ErrorResources.ErrorMessage, result.ErrorMessage);
+        }
+
+        [TestMethod]
+        public void ErrorMessageTest()
+        {
+            var attribute = new CreditCardAttribute();
+            attribute.ErrorMessage = "SampleErrorMessage";
+            
+            const int invalidValue = 0;
+
+            var result = attribute.GetValidationResult(invalidValue, new ValidationContext(0, null, null));
+
+            Assert.AreEqual("SampleErrorMessage", result.ErrorMessage);
+        }
 	}
 }

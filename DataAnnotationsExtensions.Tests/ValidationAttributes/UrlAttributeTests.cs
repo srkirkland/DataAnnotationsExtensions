@@ -1,4 +1,5 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using System.ComponentModel.DataAnnotations;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace DataAnnotationsExtensions.Tests.ValidationAttributes
 {
@@ -17,6 +18,33 @@ namespace DataAnnotationsExtensions.Tests.ValidationAttributes
             Assert.IsFalse(attribute.IsValid("file:///foo.bar"));
             Assert.IsFalse(attribute.IsValid("http://user%password@foo.bar/"));
             Assert.IsFalse(attribute.IsValid("foo.png"));
+        }
+
+        [TestMethod]
+        public void ErrorResourcesTest()
+        {
+            var attribute = new UrlAttribute();
+            attribute.ErrorMessageResourceName = "ErrorMessage";
+            attribute.ErrorMessageResourceType = typeof(ErrorResources);
+
+            const string invalidValue = "a";
+
+            var result = attribute.GetValidationResult(invalidValue, new ValidationContext(0, null, null));
+
+            Assert.AreEqual(ErrorResources.ErrorMessage, result.ErrorMessage);
+        }
+
+        [TestMethod]
+        public void ErrorMessageTest()
+        {
+            var attribute = new UrlAttribute();
+            attribute.ErrorMessage = "SampleErrorMessage";
+
+            const string invalidValue = "a";
+
+            var result = attribute.GetValidationResult(invalidValue, new ValidationContext(0, null, null));
+
+            Assert.AreEqual("SampleErrorMessage", result.ErrorMessage);
         }
     }
 }
