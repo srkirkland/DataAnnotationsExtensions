@@ -67,6 +67,45 @@ namespace DataAnnotationsExtensions.Tests.ValidationAttributes
             attr.Validate(currentObject.CompareProperty, testContext);
         }
 
+        [TestMethod]
+        public void ErrorResourcesTest()
+        {
+            var currentObject = new CompareObject("a");
+            object otherObject = new CompareObject("b");
+
+            var testContext = new ValidationContext(otherObject, null, null);
+            testContext.DisplayName = "CurrentProperty";
+
+            var attribute = new EqualToAttribute("CompareProperty")
+                                {
+                                    ErrorMessageResourceName = "ErrorMessage",
+                                    ErrorMessageResourceType = typeof (ErrorResources)
+                                };
+
+            var result = attribute.GetValidationResult(currentObject, new ValidationContext(otherObject, null, null));
+
+            Assert.AreEqual(ErrorResources.ErrorMessage, result.ErrorMessage);
+        }
+
+        [TestMethod]
+        public void ErrorMessageTest()
+        {
+            var currentObject = new CompareObject("a");
+            object otherObject = new CompareObject("b");
+
+            var testContext = new ValidationContext(otherObject, null, null);
+            testContext.DisplayName = "CurrentProperty";
+
+            var attribute = new EqualToAttribute("CompareProperty")
+            {
+                ErrorMessage = "SampleErrorMessage"
+            };
+
+            var result = attribute.GetValidationResult(currentObject, new ValidationContext(otherObject, null, null));
+
+            Assert.AreEqual("SampleErrorMessage", result.ErrorMessage);
+        }
+
         private class DerivedEqualToAttribute : EqualToAttribute
         {
             public DerivedEqualToAttribute(string otherProperty)
