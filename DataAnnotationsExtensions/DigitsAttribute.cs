@@ -1,6 +1,5 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
-using System.Globalization;
 using DataAnnotationsExtensions.Resources;
 
 namespace DataAnnotationsExtensions
@@ -29,7 +28,7 @@ namespace DataAnnotationsExtensions
 
             int retNum;
 
-            var parseSuccess = int.TryParse(Convert.ToString(value), NumberStyles.Any, NumberFormatInfo.InvariantInfo, out retNum);
+            var parseSuccess = int.TryParse(Convert.ToString(value), out retNum);
 
             return parseSuccess && retNum >= 0;
         }

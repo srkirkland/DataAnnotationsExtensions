@@ -40,7 +40,7 @@ namespace DataAnnotationsExtensions
 
             double valueAsDouble;
 
-            var isDouble = double.TryParse(Convert.ToString(value), NumberStyles.Any, NumberFormatInfo.InvariantInfo, out valueAsDouble);
+            var isDouble = double.TryParse(Convert.ToString(value), out valueAsDouble);
 
             return isDouble && valueAsDouble <= _max;
         }

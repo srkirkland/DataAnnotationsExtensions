@@ -1,6 +1,5 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
-using System.Globalization;
 using DataAnnotationsExtensions.Resources;
 
 namespace DataAnnotationsExtensions
@@ -29,7 +28,7 @@ namespace DataAnnotationsExtensions
 
             DateTime retDate;
 
-            return DateTime.TryParse(Convert.ToString(value), DateTimeFormatInfo.InvariantInfo, DateTimeStyles.None, out retDate);
+            return DateTime.TryParse(Convert.ToString(value), out retDate);
         }
     }
 }

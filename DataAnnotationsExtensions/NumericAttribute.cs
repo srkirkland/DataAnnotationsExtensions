@@ -1,6 +1,5 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
-using System.Globalization;
 using DataAnnotationsExtensions.Resources;
 
 namespace DataAnnotationsExtensions
@@ -28,7 +27,7 @@ namespace DataAnnotationsExtensions
 
             double retNum;
 
-            return double.TryParse(Convert.ToString(value), NumberStyles.Any, NumberFormatInfo.InvariantInfo, out retNum);
+            return double.TryParse(Convert.ToString(value), out retNum);
         }
     }
 }
