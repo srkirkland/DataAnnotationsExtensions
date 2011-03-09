@@ -2,7 +2,7 @@
 <package xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <metadata xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
     <id>DataAnnotationsExtensions</id>
-    <version>0.2.0.0</version>
+    <version>0.3.0.0</version>
     <authors>Scott Kirkland</authors>
     <owners>Scott Kirkland</owners>    
     <licenseUrl>https://github.com/srkirkland/DataAnnotationsExtensions/raw/master/LICENSE.txt</licenseUrl>

@@ -195,6 +195,7 @@
     <Content Include="Views\Home\Download.cshtml" />
     <Content Include="Views\Home\Wiki.cshtml" />
     <Content Include="Views\Shared\_Analytics.cshtml" />
+    <Content Include="Views\Home\_Packages.cshtml" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />

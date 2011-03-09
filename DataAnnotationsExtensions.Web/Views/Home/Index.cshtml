@@ -12,11 +12,10 @@ The core library provides server-side validation attributes that can be used in 
 <p>
 All validation attributes are covered with unit tests and also have a dedicated controller in the included sample website (click @Html.ActionLink("Demos", "Demos", "Home") to see a demonstration of each validation attribute).
 </p>
+<p>
+    See my blog post <a href="http://weblogs.asp.net/srkirkland/archive/2011/02/23/introducing-data-annotations-extensions.aspx">Introducing Data Annotations Extensions</a> for an overview of the project as well as some examples.
+</p>
 <h3>NuGet Packages</h3>
 <p>
-    NuGet packages are available now, and they come in two flavors:
-    <ul>
-        <li><a href="http://nuget.org/Packages/Packages/Details/DataAnnotationsExtensions-0-2-0-0">DataAnnotationsExtensions</a>: Contains the server-side Data Annotations Extensions, which can be used in any project that can reference System.ComponentModel.DataAnnotations.</li>
-        <li><a href="http://nuget.org/Packages/Packages/Details/DataAnnotationsExtensions-MVC3-0-2-0-0">DataAnnotationsExtensions.MVC3</a>: Contains both server and client side Data Annotations Extensions, automatically registered for client-side validation with ASP.NET MVC3.</li>
-    </ul>
+    @Html.Partial("_Packages")
 </p>
