@@ -1,6 +1,7 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
 using System.Globalization;
+using System.Linq;
 using System.Reflection;
 using DataAnnotationsExtensions.Resources;
 
@@ -22,9 +23,12 @@ namespace DataAnnotationsExtensions
                 throw new ArgumentNullException("otherProperty");
             }
             OtherProperty = otherProperty;
+            OtherPropertyDisplayName = null;
         }
 
         public string OtherProperty { get; private set; }
+
+        public string OtherPropertyDisplayName { get; set; }
 
         public override string FormatErrorMessage(string name)
         {
@@ -33,7 +37,9 @@ namespace DataAnnotationsExtensions
                 ErrorMessage = ValidatorResources.CompareAttribute_MustMatch;
             }
 
-            return String.Format(CultureInfo.CurrentCulture, ErrorMessageString, name, OtherProperty);
+            var otherPropertyDisplayName = OtherPropertyDisplayName ?? OtherProperty;
+
+            return String.Format(CultureInfo.CurrentCulture, ErrorMessageString, name, otherPropertyDisplayName);
         }
 
         protected override ValidationResult IsValid(object value, ValidationContext validationContext)
@@ -42,6 +48,14 @@ namespace DataAnnotationsExtensions
             if (otherPropertyInfo == null)
             {
                 return new ValidationResult(String.Format(CultureInfo.CurrentCulture, ValidatorResources.EqualTo_UnknownProperty, OtherProperty));
+            }
+
+            var displayAttribute =
+                otherPropertyInfo.GetCustomAttributes(typeof(DisplayAttribute), false).FirstOrDefault() as DisplayAttribute;
+
+            if (displayAttribute != null && !string.IsNullOrWhiteSpace(displayAttribute.Name))
+            {
+                OtherPropertyDisplayName = displayAttribute.Name;
             }
 
             object otherPropertyValue = otherPropertyInfo.GetValue(validationContext.ObjectInstance, null);
