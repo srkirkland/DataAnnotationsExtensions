@@ -44,10 +44,12 @@ namespace DataAnnotationsExtensions
 
         protected override ValidationResult IsValid(object value, ValidationContext validationContext)
         {
+            var memberNames = new[] {validationContext.MemberName};
+
             PropertyInfo otherPropertyInfo = validationContext.ObjectType.GetProperty(OtherProperty);
             if (otherPropertyInfo == null)
             {
-                return new ValidationResult(String.Format(CultureInfo.CurrentCulture, ValidatorResources.EqualTo_UnknownProperty, OtherProperty));
+                return new ValidationResult(String.Format(CultureInfo.CurrentCulture, ValidatorResources.EqualTo_UnknownProperty, OtherProperty), memberNames);
             }
 
             var displayAttribute =
@@ -61,7 +63,7 @@ namespace DataAnnotationsExtensions
             object otherPropertyValue = otherPropertyInfo.GetValue(validationContext.ObjectInstance, null);
             if (!Equals(value, otherPropertyValue))
             {
-                return new ValidationResult(FormatErrorMessage(validationContext.DisplayName));
+                return new ValidationResult(FormatErrorMessage(validationContext.DisplayName), memberNames);
             }
             return null;
         }
