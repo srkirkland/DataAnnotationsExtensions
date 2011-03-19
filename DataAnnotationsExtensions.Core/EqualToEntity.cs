@@ -9,6 +9,7 @@ namespace DataAnnotationsExtensions.Core
     public class EqualToEntity
     {
         [Required]
+        [Display(Name = "PrimaryDisplayName")]
         public string Primary { get; set; }
 
         [EqualTo("Primary")]
