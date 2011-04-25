@@ -26,9 +26,9 @@ namespace DataAnnotationsExtensions
         {
             if (value == null) return true;
 
-            int retNum;
+            long retNum;
 
-            var parseSuccess = int.TryParse(Convert.ToString(value), out retNum);
+            var parseSuccess = long.TryParse(Convert.ToString(value), out retNum);
 
             return parseSuccess && retNum >= 0;
         }
