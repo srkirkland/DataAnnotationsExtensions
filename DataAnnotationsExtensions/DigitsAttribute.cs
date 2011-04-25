@@ -1,5 +1,6 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
+using System.Text.RegularExpressions;
 using DataAnnotationsExtensions.Resources;
 
 namespace DataAnnotationsExtensions
@@ -7,6 +8,8 @@ namespace DataAnnotationsExtensions
     [AttributeUsage(AttributeTargets.Property, AllowMultiple = false)]
     public class DigitsAttribute : DataTypeAttribute
     {
+        private readonly Regex _digitsExpr = new Regex(@"^\d+$");
+
         public DigitsAttribute()
             : base("digits")
         {
@@ -26,11 +29,7 @@ namespace DataAnnotationsExtensions
         {
             if (value == null) return true;
 
-            int retNum;
-
-            var parseSuccess = int.TryParse(Convert.ToString(value), out retNum);
-
-            return parseSuccess && retNum >= 0;
+            return _digitsExpr.Match(value.ToString()).Success;
         }
     }
 }

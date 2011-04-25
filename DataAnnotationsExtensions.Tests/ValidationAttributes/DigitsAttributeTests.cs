@@ -16,6 +16,7 @@ namespace DataAnnotationsExtensions.Tests.ValidationAttributes
             Assert.IsTrue(attribute.IsValid("1234"));
             Assert.IsTrue(attribute.IsValid("12345"));
             Assert.IsTrue(attribute.IsValid(14));
+            Assert.IsTrue(attribute.IsValid("6708025174"));
             Assert.IsFalse(attribute.IsValid(14.50));
             Assert.IsFalse(attribute.IsValid(-10)); //Does not allow negative numbers
             Assert.IsFalse(attribute.IsValid("-50"));
