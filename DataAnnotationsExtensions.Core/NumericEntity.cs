@@ -3,6 +3,9 @@
     public class NumericEntity
     {
         [Numeric]
-        public string Number { get; set; }
+        public string NumberAsString { get; set; }
+
+        [Numeric] //Redundant, but won't cause problems
+        public decimal NumberAsDecimal { get; set; }
     }
 }
