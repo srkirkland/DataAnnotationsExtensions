@@ -30,12 +30,15 @@ namespace DataAnnotationsExtensions
                 return true;
             }
 
-            string ccValue = value as string;
+            var ccValue = value as string;
             if (ccValue == null)
             {
                 return false;
             }
-            ccValue = ccValue.Replace("-", "");
+
+            ccValue = ccValue.Replace("-", string.Empty);
+
+            if (string.IsNullOrEmpty(ccValue)) return false; //Don't accept only dashes
 
             int checksum = 0;
             bool evenDigit = false;
