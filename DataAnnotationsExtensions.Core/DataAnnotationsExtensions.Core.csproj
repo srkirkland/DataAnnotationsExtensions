@@ -45,6 +45,7 @@
       <Link>Properties\CommonAssemblyInfo.cs</Link>
     </Compile>
     <Compile Include="CreditCardEntity.cs" />
+    <Compile Include="CuitEntity.cs" />
     <Compile Include="DateEntity.cs" />
     <Compile Include="DigitsEntity.cs" />
     <Compile Include="EmailEntity.cs" />
