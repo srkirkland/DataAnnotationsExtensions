@@ -13,7 +13,7 @@ namespace DataAnnotationsExtensions.ClientValidation.Adapters
 
         public override IEnumerable<ModelClientValidationRule> GetClientValidationRules()
         {
-            return new[] { new ModelClientValidationCuitRule(ErrorMessage) };
+            return new[] { new ModelClientValidationCuitRule(ErrorMessage, Attribute.Regex) };
         }
     }
 }

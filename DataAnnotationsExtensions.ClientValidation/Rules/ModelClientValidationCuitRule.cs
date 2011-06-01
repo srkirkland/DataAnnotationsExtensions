@@ -4,10 +4,11 @@ namespace DataAnnotationsExtensions.ClientValidation.Rules
 {
     public class ModelClientValidationCuitRule : ModelClientValidationRule
     {
-        public ModelClientValidationCuitRule(string errorMessage)
+        public ModelClientValidationCuitRule(string errorMessage, string regex)
         {
             ErrorMessage = errorMessage;
-            ValidationType = "cuit";
+            ValidationType = "regex";
+            ValidationParameters["pattern"] = regex;
         }
     }
 }

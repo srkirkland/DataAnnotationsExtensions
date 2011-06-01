@@ -18,9 +18,9 @@ namespace DataAnnotationsExtensions.Tests.ValidationAttributes
 			Assert.IsTrue(attribute.IsValid("27238403206"));
 			
 			Assert.IsFalse(attribute.IsValid("20 24559715 1"));
-            Assert.IsFalse(attribute.IsValid("")); 
-            Assert.IsFalse(attribute.IsValid("99-99999999-9"));
-			Assert.IsFalse(attribute.IsValid("99999999999"));
+            Assert.IsFalse(attribute.IsValid(""));
+            Assert.IsFalse(attribute.IsValid("123456789"));
+            Assert.IsFalse(attribute.IsValid("aa-aaaaaaaa-a"));
 			Assert.IsFalse(attribute.IsValid("4408 0412 3456 7890"));
 			Assert.IsFalse(attribute.IsValid(0));
             Assert.IsFalse(attribute.IsValid(20245597151));
