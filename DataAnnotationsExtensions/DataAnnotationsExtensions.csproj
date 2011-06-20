@@ -47,6 +47,7 @@
     <Compile Include="CreditCardAttribute.cs" />
     <Compile Include="CuitAttribute.cs" />
     <Compile Include="DateAttribute.cs" />
+    <Compile Include="DateNotBeforeAttribute.cs" />
     <Compile Include="DigitsAttribute.cs" />
     <Compile Include="EmailAttribute.cs" />
     <Compile Include="EqualToAttribute.cs" />

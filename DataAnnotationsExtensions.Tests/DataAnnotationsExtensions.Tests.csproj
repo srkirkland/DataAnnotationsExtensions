@@ -62,6 +62,7 @@
     <Compile Include="ValidationAttributes\CreditCardAttributeTests.cs" />
     <Compile Include="ValidationAttributes\CuitAttributeTests.cs" />
     <Compile Include="ValidationAttributes\DateAttributeTests.cs" />
+    <Compile Include="ValidationAttributes\DateNotBeforeAttributeTests.cs" />
     <Compile Include="ValidationAttributes\DigitsAttributeTests.cs" />
     <Compile Include="ValidationAttributes\EmailAttributeTests.cs" />
     <Compile Include="ValidationAttributes\EqualToAttributeTest.cs" />
