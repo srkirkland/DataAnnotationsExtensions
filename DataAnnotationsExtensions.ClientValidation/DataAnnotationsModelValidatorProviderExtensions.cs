@@ -19,6 +19,7 @@ namespace DataAnnotationsExtensions.ClientValidation
             DataAnnotationsModelValidatorProvider.RegisterAdapter(typeof(DateAttribute), typeof(DateAttributeAdapter));
             DataAnnotationsModelValidatorProvider.RegisterAdapter(typeof(IntegerAttribute), typeof(IntegerAttributeAdapter));
             DataAnnotationsModelValidatorProvider.RegisterAdapter(typeof(CuitAttribute), typeof(CuitAttributeAdapter));
+            DataAnnotationsModelValidatorProvider.RegisterAdapter(typeof(YearAttribute), typeof(YearAttributeAdapter));
         }
     }
 }
