@@ -23,7 +23,7 @@ namespace DataAnnotationsExtensions.Tests.ValidationAttributes
         [TestMethod]
         public void IsValidWithoutRequiringProtocol() {
 
-            var attribute = new UrlAttribute(RequireProtocol: false);
+            var attribute = new UrlAttribute(requireProtocol: false);
 
             Assert.IsTrue(attribute.IsValid("foo.bar"));
             Assert.IsTrue(attribute.IsValid("www.foo.bar"));
