@@ -565,6 +565,15 @@ namespace DataAnnotationsExtensions.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to The {0} field is not a valid URL..
+        /// </summary>
+        internal static string UrlAttributeWithoutProtocolRequired_Invalid {
+            get {
+                return ResourceManager.GetString("UrlAttributeWithoutProtocolRequired_Invalid", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to The {0} field is not a valid year.
         /// </summary>
         internal static string YearAttribute_Invalid {
