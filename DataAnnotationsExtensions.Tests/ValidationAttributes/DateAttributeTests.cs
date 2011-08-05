@@ -11,6 +11,8 @@ namespace DataAnnotationsExtensions.Tests.ValidationAttributes
         public void IsValidTests()
         {
             var attribute = new DateAttribute();
+            
+            System.Threading.Thread.CurrentThread.CurrentCulture = new System.Globalization.CultureInfo("en-us");
 
             Assert.IsTrue(attribute.IsValid(null)); // Don't check for required
             Assert.IsTrue(attribute.IsValid(DateTime.Now));
