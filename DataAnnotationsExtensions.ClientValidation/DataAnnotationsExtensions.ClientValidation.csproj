@@ -79,7 +79,6 @@
     <Compile Include="Rules\ModelClientValidationMaxRule.cs" />
     <Compile Include="Rules\ModelClientValidationMinRule.cs" />
     <Compile Include="Rules\ModelClientValidationNumericRule.cs" />
-    <Compile Include="Rules\ModelClientValidationUrlRule.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
