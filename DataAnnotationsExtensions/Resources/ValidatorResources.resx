@@ -291,4 +291,10 @@
   <data name="UrlAttributeWithoutProtocolRequired_Invalid" xml:space="preserve">
     <value>The {0} field is not a valid URL.</value>
   </data>
+  <data name="CompareAttribute_MustBeGreater" xml:space="preserve">
+    <value>'{0}' is not greater than '{1}'.</value>
+  </data>
+  <data name="CompareAttribute_TypeNotSupported" xml:space="preserve">
+    <value>'{0}' types can not be compared.</value>
+  </data>
 </root>
