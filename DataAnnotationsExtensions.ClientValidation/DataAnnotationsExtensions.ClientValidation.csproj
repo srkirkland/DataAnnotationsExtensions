@@ -51,6 +51,7 @@
     <Compile Include="..\Build\CommonAssemblyInfo.cs">
       <Link>Properties\CommonAssemblyInfo.cs</Link>
     </Compile>
+    <Compile Include="Adapters\GreaterThanAttributeAdapter.cs" />
     <Compile Include="Adapters\YearAttributeAdapter.cs" />
     <Compile Include="Adapters\CreditCardAttributeAdapter.cs" />
     <Compile Include="Adapters\CuitAttributeAdapter.cs" />
@@ -69,6 +70,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ClientValidationResources.resx</DependentUpon>
     </Compile>
+    <Compile Include="Rules\ModelClientValidationGreaterThanRule.cs" />
     <Compile Include="Rules\ModelClientValidationCreditCardRule.cs" />
     <Compile Include="Rules\ModelClientValidationCuitRule.cs" />
     <Compile Include="Rules\ModelClientValidationDateRule.cs" />

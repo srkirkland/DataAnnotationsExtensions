@@ -2,12 +2,13 @@
 using System.Collections.Generic;
 using System.Web.Mvc;
 using DataAnnotationsExtensions.ClientValidation.Resources;
+using DataAnnotationsExtensions.ClientValidation.Rules;
 
 namespace DataAnnotationsExtensions.ClientValidation.Adapters
 {
-    public class EqualToAttributeAdapter : DataAnnotationsModelValidator<EqualToAttribute>
+    public class GreaterThanAttributeAdapter : DataAnnotationsModelValidator<GreaterThanAttribute>
     {
-        public EqualToAttributeAdapter(ModelMetadata metadata, ControllerContext context, EqualToAttribute attribute)
+        public GreaterThanAttributeAdapter(ModelMetadata metadata, ControllerContext context, GreaterThanAttribute attribute)
             : base(metadata, context, attribute)
         {
         }
@@ -18,7 +19,7 @@ namespace DataAnnotationsExtensions.ClientValidation.Adapters
 
             var otherProp = FormatPropertyForClientValidation(Attribute.OtherProperty);
             //We'll just use the built-in System.Web.Mvc client validation rule
-            return new[] { new ModelClientValidationEqualToRule(ErrorMessage, otherProp) };
+            return new[] { new ModelClientValidationGreaterThanRule(ErrorMessage, otherProp) };
         }
 
         private string GetOtherPropertyDisplayName()
