@@ -124,11 +124,29 @@ namespace DataAnnotationsExtensions.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to &apos;{0}&apos; is not greater than &apos;{1}&apos;..
+        /// </summary>
+        internal static string CompareAttribute_MustBeGreater {
+            get {
+                return ResourceManager.GetString("CompareAttribute_MustBeGreater", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to &apos;{0}&apos; and &apos;{1}&apos; do not match..
         /// </summary>
         internal static string CompareAttribute_MustMatch {
             get {
                 return ResourceManager.GetString("CompareAttribute_MustMatch", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &apos;{0}&apos; types can not be compared..
+        /// </summary>
+        internal static string CompareAttribute_TypeNotSupported {
+            get {
+                return ResourceManager.GetString("CompareAttribute_TypeNotSupported", resourceCulture);
             }
         }
         
