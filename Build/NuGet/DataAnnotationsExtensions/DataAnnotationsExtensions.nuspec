@@ -14,6 +14,6 @@
     <tags>ASP.NET Validation</tags>
   </metadata>
   <files xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
-      <file src="../../artifacts/DataAnnotationsExtensions.dll" target="lib\NETFramework40" />
+      <file src="..\..\artifacts\DataAnnotationsExtensions.dll" target="lib\NETFramework40" />
   </files>
 </package>

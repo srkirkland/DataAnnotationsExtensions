@@ -17,7 +17,7 @@
     </dependencies>
   </metadata>
   <files xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
-      <file src="../../artifacts/DataAnnotationsExtensions.ClientValidation.dll" target="lib\NETFramework40" />
-      <file src="Content/App_Start/RegisterClientValidationExtensions.cs.pp" target="content/App_Start" />
+      <file src="..\..\artifacts\DataAnnotationsExtensions.ClientValidation.dll" target="lib\NETFramework40" />
+      <file src="Content\App_Start\RegisterClientValidationExtensions.cs.pp" target="content\App_Start" />
   </files>
 </package>
