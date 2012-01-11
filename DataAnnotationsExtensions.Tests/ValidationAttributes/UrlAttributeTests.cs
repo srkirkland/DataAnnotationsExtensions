@@ -33,6 +33,18 @@ namespace DataAnnotationsExtensions.Tests.ValidationAttributes
         }
 
         [TestMethod]
+        public void IsValidWithUppercaseLetters()
+        {
+
+            var attribute = new UrlAttribute();
+            
+            Assert.IsTrue(attribute.IsValid("http://FOO.bar"));
+            Assert.IsTrue(attribute.IsValid("https://foo.BAR"));
+            Assert.IsTrue(attribute.IsValid("ftp://FOO.BAR"));
+            Assert.IsFalse(attribute.IsValid("file:///Foo.Bar"));
+        }
+
+        [TestMethod]
         public void ErrorResourcesTest()
         {
             var attribute = new UrlAttribute();

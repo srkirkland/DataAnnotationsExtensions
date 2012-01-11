@@ -69,6 +69,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ClientValidationResources.resx</DependentUpon>
     </Compile>
+    <Compile Include="Rules\ModelClientValidationUrlRule.cs" />
     <Compile Include="Rules\ModelClientValidationCreditCardRule.cs" />
     <Compile Include="Rules\ModelClientValidationCuitRule.cs" />
     <Compile Include="Rules\ModelClientValidationDateRule.cs" />
