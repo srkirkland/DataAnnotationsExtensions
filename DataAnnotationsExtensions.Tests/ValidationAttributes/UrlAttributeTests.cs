@@ -1,5 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using System;
 
 namespace DataAnnotationsExtensions.Tests.ValidationAttributes
 {
@@ -42,6 +43,19 @@ namespace DataAnnotationsExtensions.Tests.ValidationAttributes
             Assert.IsTrue(attribute.IsValid("https://foo.BAR"));
             Assert.IsTrue(attribute.IsValid("ftp://FOO.BAR"));
             Assert.IsFalse(attribute.IsValid("file:///Foo.Bar"));
+        }
+
+        [TestMethod]
+        public void IsValidWithUri()
+        {
+            var attribute = new UrlAttribute();
+
+            Assert.IsTrue(attribute.IsValid(new Uri("http://foo.bar")));
+            Assert.IsTrue(attribute.IsValid(new Uri("http://FOO.bar")));
+            Assert.IsTrue(attribute.IsValid(new Uri("https://foo.BAR")));
+            Assert.IsTrue(attribute.IsValid(new Uri("ftp://FOO.BAR")));
+
+            Assert.IsFalse(attribute.IsValid(new Uri("file:///foo.bar")));
         }
 
         [TestMethod]

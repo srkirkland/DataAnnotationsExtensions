@@ -55,7 +55,7 @@ namespace DataAnnotationsExtensions
                 return true;
             }
 
-            var valueAsString = ( value.GetType() == typeof( Uri ) ) ? value.ToString() : value as string;
+            var valueAsString =  value is Uri ? value.ToString() : value as string;
             
             return valueAsString != null &&
                    new Regex(_regex, RegexOptions.Compiled | RegexOptions.IgnoreCase).Match(valueAsString).Length > 0;
