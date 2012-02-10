@@ -36,9 +36,9 @@ namespace DataAnnotationsExtensions
                 return false;
             }
 
-            ccValue = ccValue.Replace("-", string.Empty);
+            ccValue = ccValue.Replace("-", string.Empty).Replace(" ", string.Empty);
 
-            if (string.IsNullOrEmpty(ccValue)) return false; //Don't accept only dashes
+            if (string.IsNullOrEmpty(ccValue)) return false; //Don't accept only dashes/spaces
 
             int checksum = 0;
             bool evenDigit = false;

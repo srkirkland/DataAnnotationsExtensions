@@ -15,6 +15,7 @@ namespace DataAnnotationsExtensions.Tests.ValidationAttributes
 			Assert.IsTrue(attribute.IsValid("0000000000000000"));    // Simplest valid value
 			Assert.IsTrue(attribute.IsValid("1234567890123452"));    // Good checksum
 			Assert.IsTrue(attribute.IsValid("1234-5678-9012-3452")); // Good checksum, with dashes
+			Assert.IsTrue(attribute.IsValid("1234 5678 9012 3452")); // Good checksum, with spaces
 			Assert.IsTrue(attribute.IsValid("541234567890125"));
 			Assert.IsTrue(attribute.IsValid("4408041234567893"));
 			Assert.IsTrue(attribute.IsValid("4417123456789113"));
