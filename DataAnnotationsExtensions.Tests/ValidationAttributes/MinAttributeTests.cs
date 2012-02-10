@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
@@ -59,7 +60,23 @@ namespace DataAnnotationsExtensions.Tests.ValidationAttributes
 
             var result = attribute.GetValidationResult(invalidValue, new ValidationContext(0, null, null));
 
-            Assert.AreEqual(ErrorResources.ErrorMessage, result.ErrorMessage);
+            Assert.AreEqual("error message", result.ErrorMessage);
+        }
+
+        [TestMethod]
+        public void GlobalizedErrorResourcesTest()
+        {
+            System.Threading.Thread.CurrentThread.CurrentUICulture = new CultureInfo("es-MX");
+
+            var attribute = new MinAttribute(1);
+            attribute.ErrorMessageResourceName = "ErrorMessage";
+            attribute.ErrorMessageResourceType = typeof(ErrorResources);
+
+            const string invalidValue = "a";
+
+            var result = attribute.GetValidationResult(invalidValue, new ValidationContext(0, null, null));
+
+            Assert.AreEqual("mensaje de error", result.ErrorMessage);
         }
 
         [TestMethod]

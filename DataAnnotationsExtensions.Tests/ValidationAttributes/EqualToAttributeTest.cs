@@ -1,5 +1,6 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
+using System.Globalization;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace DataAnnotationsExtensions.Tests.ValidationAttributes
@@ -84,7 +85,29 @@ namespace DataAnnotationsExtensions.Tests.ValidationAttributes
 
             var result = attribute.GetValidationResult(currentObject, new ValidationContext(otherObject, null, null));
 
-            Assert.AreEqual(ErrorResources.ErrorMessage, result.ErrorMessage);
+            Assert.AreEqual("error message", result.ErrorMessage);
+        }
+
+        [TestMethod]
+        public void GlobalizedErrorResourcesTest()
+        {
+            System.Threading.Thread.CurrentThread.CurrentUICulture = new CultureInfo("es-MX");
+
+            var currentObject = new CompareObject("a");
+            object otherObject = new CompareObject("b");
+
+            var testContext = new ValidationContext(otherObject, null, null);
+            testContext.DisplayName = "CurrentProperty";
+
+            var attribute = new EqualToAttribute("CompareProperty")
+            {
+                ErrorMessageResourceName = "ErrorMessage",
+                ErrorMessageResourceType = typeof(ErrorResources)
+            };
+
+            var result = attribute.GetValidationResult(currentObject, new ValidationContext(otherObject, null, null));
+
+            Assert.AreEqual("mensaje de error", result.ErrorMessage);
         }
 
         [TestMethod]
