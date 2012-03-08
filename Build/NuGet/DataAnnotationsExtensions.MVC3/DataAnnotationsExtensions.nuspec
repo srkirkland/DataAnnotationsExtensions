@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>DataAnnotationsExtensions.MVC3</id>
-    <version>1.0.0.0</version>
+    <version>1.0.2.0</version>
     <authors>Scott Kirkland</authors>
     <owners>Scott Kirkland</owners>
     <licenseUrl>https://github.com/srkirkland/DataAnnotationsExtensions/raw/master/LICENSE.txt</licenseUrl>
@@ -13,7 +13,7 @@
     <releaseNotes>See https://github.com/srkirkland/DataAnnotationsExtensions/wiki/Version-History</releaseNotes>
     <tags>ASP.NET Validation MVC MVC3</tags>
     <dependencies>
-      <dependency id="DataAnnotationsExtensions" version="1.0.0.0" />
+      <dependency id="DataAnnotationsExtensions" version="1.0.2.0" />
       <dependency id="WebActivator" version="1.2.0.0" />
     </dependencies>
   </metadata>
