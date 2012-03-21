@@ -297,4 +297,7 @@
   <data name="CompareAttribute_TypeNotSupported" xml:space="preserve">
     <value>'{0}' types can not be compared.</value>
   </data>
+  <data name="CompareAttribute_MustBeGreaterOrEqualTo" xml:space="preserve">
+    <value>'{0}' is not greater or equal to '{1}'.</value>
+  </data>
 </root>

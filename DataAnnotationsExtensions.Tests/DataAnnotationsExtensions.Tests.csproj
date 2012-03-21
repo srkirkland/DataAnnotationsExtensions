@@ -59,6 +59,7 @@
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Controllers\HomeControllerTest.cs" />
+    <Compile Include="ValidationAttributes\GreaterThanOrEqualToAttributeTest.cs" />
     <Compile Include="ValidationAttributes\GreaterThanAttributeTest.cs" />
     <Compile Include="ValidationAttributes\YearAttributeTests.cs" />
     <Compile Include="ValidationAttributes\CreditCardAttributeTests.cs" />

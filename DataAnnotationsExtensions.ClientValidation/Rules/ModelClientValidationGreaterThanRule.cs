@@ -12,4 +12,14 @@ namespace DataAnnotationsExtensions.ClientValidation.Rules
             ValidationParameters.Add("other", otherProperty);
         }
     }
+    public class ModelClientValidationGreaterThanOrEqualToRule : ModelClientValidationRule
+    {
+        public ModelClientValidationGreaterThanOrEqualToRule(string errorMessage, string otherProperty)
+        {
+            ErrorMessage = errorMessage;
+
+            ValidationType = "greaterthanorequalto";
+            ValidationParameters.Add("other", otherProperty);
+        }
+    }
 }

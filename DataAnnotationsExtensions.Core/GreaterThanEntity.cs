@@ -16,4 +16,14 @@ namespace DataAnnotationsExtensions.Core
         [Required]
         public DateTime Greater { get; set; }
     }
+    public class GreaterThanOrEqualToEntity
+    {
+        [Required]
+        [Display(Name = "LesserDisplayName")]
+        public DateTime Lesser { get; set; }
+
+        [GreaterThanOrEqualTo("Lesser")]
+        [Required]
+        public DateTime Greater { get; set; }
+    }
 }

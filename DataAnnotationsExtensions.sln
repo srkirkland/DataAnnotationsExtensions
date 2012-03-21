@@ -18,7 +18,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Build", "Build", "{0FB0F3C0
 		Build.cmd = Build.cmd
 		Build\Build.proj = Build\Build.proj
 		Build\Build.tasks = Build\Build.tasks
-		Build\CommonAssemblyInfo.cs = Build\CommonAssemblyInfo.cs
 	EndProjectSection
 EndProject
 Global

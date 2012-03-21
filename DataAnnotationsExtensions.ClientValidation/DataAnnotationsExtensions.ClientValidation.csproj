@@ -51,14 +51,14 @@
     <Compile Include="..\Build\CommonAssemblyInfo.cs">
       <Link>Properties\CommonAssemblyInfo.cs</Link>
     </Compile>
-    <Compile Include="Adapters\GreaterThanAttributeAdapter.cs" />
+    <Compile Include="Adapters\EqualToAttributeAdapter.cs" />
     <Compile Include="Adapters\YearAttributeAdapter.cs" />
     <Compile Include="Adapters\CreditCardAttributeAdapter.cs" />
     <Compile Include="Adapters\CuitAttributeAdapter.cs" />
     <Compile Include="Adapters\DateAttributeAdapter.cs" />
     <Compile Include="Adapters\DigitsAttributeAdapter.cs" />
     <Compile Include="Adapters\EmailAttributeAdapter.cs" />
-    <Compile Include="Adapters\EqualToAttributeAdapter.cs" />
+    <Compile Include="Adapters\GreaterThanAttributeAdapter.cs" />
     <Compile Include="Adapters\FileExtensionsAttributeAdapter.cs" />
     <Compile Include="Adapters\MaxAttributeAdapter.cs" />
     <Compile Include="Adapters\MinAttributeAdapter.cs" />

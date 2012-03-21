@@ -7,11 +7,11 @@ namespace DataAnnotationsExtensions.Tests.ValidationAttributes
     [TestClass]
     public class GreaterThanAttributeTest
     {
-        private CompareObject<DateTime> _mainObject;
-        private CompareObject<DateTime> _otherObject;
-        private ValidationContext _testContext;
-        private GreaterThanAttribute _attribute;
-        private ValidationResult _result;
+        protected CompareObject<DateTime> _mainObject;
+        protected CompareObject<DateTime> _otherObject;
+        protected ValidationContext _testContext;
+        protected BaseComparisonAttribute _attribute;
+        protected ValidationResult _result;
 
         [TestInitialize]
         public void Initialize()
@@ -129,7 +129,7 @@ namespace DataAnnotationsExtensions.Tests.ValidationAttributes
             Assert.AreEqual("SampleErrorMessage", _result.ErrorMessage);
         }
 
-        private class DerivedGreaterThanAttribute : GreaterThanAttribute
+        protected class DerivedGreaterThanAttribute : GreaterThanAttribute
         {
             public DerivedGreaterThanAttribute(string otherProperty)
                 : base(otherProperty)
@@ -147,7 +147,7 @@ namespace DataAnnotationsExtensions.Tests.ValidationAttributes
             }
         }
 
-        private class CompareObject<T>
+        protected class CompareObject<T>
         {
             public T CompareProperty { get; set; }
 
