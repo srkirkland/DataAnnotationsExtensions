@@ -4,6 +4,7 @@ using System.Globalization;
 using System.IO;
 using System.Linq;
 using DataAnnotationsExtensions.Resources;
+using System.Web;
 
 namespace DataAnnotationsExtensions
 {
@@ -37,8 +38,17 @@ namespace DataAnnotationsExtensions
             {
                 return true;
             }
-            
-            string valueAsString = value as string;
+
+            string valueAsString;
+            if (value != null && value is HttpPostedFileBase)
+            {
+                valueAsString = (value as HttpPostedFileBase).FileName;
+            }
+            else
+            {
+                valueAsString = value as string;
+            }
+
             if (valueAsString != null)
             {
                 return ValidateExtension(valueAsString);
