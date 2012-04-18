@@ -35,6 +35,19 @@ namespace DataAnnotationsExtensions.Tests.ValidationAttributes
         }
 
         [TestMethod]
+        public void IsValidExcludeProtocol()
+        {
+
+            var attribute = new UrlAttribute(excludeProtocol: true);
+
+            Assert.IsTrue(attribute.IsValid("foo.bar"));
+            Assert.IsTrue(attribute.IsValid("www.foo.bar"));
+            Assert.IsFalse(attribute.IsValid("http://foo.bar"));
+            Assert.IsFalse(attribute.IsValid("htp://foo.bar"));
+
+        }
+
+        [TestMethod]
         public void IsValidWithUppercaseLetters()
         {
 
