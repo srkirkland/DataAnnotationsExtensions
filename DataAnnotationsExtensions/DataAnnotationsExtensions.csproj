@@ -69,6 +69,7 @@
       <DependentUpon>ValidatorResources.resx</DependentUpon>
     </Compile>
     <Compile Include="UrlAttribute.cs" />
+    <Compile Include="UrlOptions.cs" />
     <Compile Include="YearAttribute.cs" />
   </ItemGroup>
   <ItemGroup>

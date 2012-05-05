@@ -8,8 +8,12 @@ namespace DataAnnotationsExtensions.Core
         [Required]
         public string Url { get; set; }
         
-        [Url(requireProtocol: false)]
+        [Url(UrlOptions.OptionalProtocol)]
         [Required]
         public string UrlWithoutProtocolRequired { get; set; }
+
+        [Url(UrlOptions.DisallowProtocol)]
+        [Required]
+        public string UrlDisallowProtocol { get; set; }
     }
 }
