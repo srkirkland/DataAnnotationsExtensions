@@ -5,6 +5,7 @@ using DataAnnotationsExtensions.Resources;
 
 namespace DataAnnotationsExtensions
 {
+    [Obsolete("Migrate to using RegularExpressionAttribute instead, like [RegularExpression(Expressions.Cuit)]")]
     [AttributeUsage(AttributeTargets.Property, AllowMultiple = false)]
     public class CuitAttribute : DataTypeAttribute
     {

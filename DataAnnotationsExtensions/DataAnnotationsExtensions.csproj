@@ -57,6 +57,7 @@
     <Compile Include="DigitsAttribute.cs" />
     <Compile Include="EmailAttribute.cs" />
     <Compile Include="EqualToAttribute.cs" />
+    <Compile Include="Expressions.cs" />
     <Compile Include="FileExtensionsAttribute.cs" />
     <Compile Include="IntegerAttribute.cs" />
     <Compile Include="MaxAttribute.cs" />

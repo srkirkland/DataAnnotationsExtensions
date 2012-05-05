@@ -4,8 +4,8 @@ namespace DataAnnotationsExtensions.Core
 {
     public class CuitEntity
     {
-        [Cuit]
         [Required]
+        [RegularExpression(Expressions.Cuit)]
         public string Cuit { get; set; }
     }
 }
