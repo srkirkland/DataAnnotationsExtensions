@@ -5,14 +5,8 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace DataAnnotationsExtensions.Tests.ValidationAttributes
 {
 	[TestClass]
-	public class CreditCardAttributeTests
+	public class CreditCardAttributeTests : TestBase
 	{
-        [TestInitialize]
-        public void TestInitialize()
-        {
-            System.Threading.Thread.CurrentThread.CurrentUICulture = new CultureInfo("");
-        }
-
 		[TestMethod]
 		public void IsValidTests()
 		{
