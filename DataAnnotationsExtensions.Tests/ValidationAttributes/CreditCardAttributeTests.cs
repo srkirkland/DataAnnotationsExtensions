@@ -7,6 +7,12 @@ namespace DataAnnotationsExtensions.Tests.ValidationAttributes
 	[TestClass]
 	public class CreditCardAttributeTests
 	{
+        [TestInitialize]
+        public void TestInitialize()
+        {
+            System.Threading.Thread.CurrentThread.CurrentUICulture = new CultureInfo("");
+        }
+
 		[TestMethod]
 		public void IsValidTests()
 		{
