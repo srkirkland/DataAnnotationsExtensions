@@ -6,7 +6,7 @@ using DataAnnotationsExtensions.Tests.Doubles;
 namespace DataAnnotationsExtensions.Tests.ValidationAttributes
 {
     [TestClass]
-    public class FileExtensionsAttributeTest
+    public class FileExtensionsAttributeTest : TestBase
     {
         [TestMethod]
         public void DefaultExtensions()
