@@ -5,7 +5,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace DataAnnotationsExtensions.Tests.ValidationAttributes
 {
 	[TestClass]
-	public class CreditCardAttributeTests
+	public class CreditCardAttributeTests : TestBase
 	{
 		[TestMethod]
 		public void IsValidTests()

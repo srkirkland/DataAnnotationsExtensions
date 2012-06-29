@@ -5,7 +5,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace DataAnnotationsExtensions.Tests.ValidationAttributes
 {
     [TestClass]
-    public class MaxAttributeTests
+    public class MaxAttributeTests : TestBase
     {
         [TestMethod]
         public void IsValidIntegerTests()

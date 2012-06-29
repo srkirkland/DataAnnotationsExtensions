@@ -6,7 +6,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace DataAnnotationsExtensions.Tests.ValidationAttributes
 {
     [TestClass]
-    public class DateAttributeTests
+    public class DateAttributeTests : TestBase
     {
         [TestMethod]
         public void IsValidTests()
