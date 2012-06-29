@@ -6,8 +6,8 @@ namespace DataAnnotationsExtensions.Tests
     [TestClass]
     public class TestBase
     {
-        [TestInitialize]
-        public void TestInitialize()
+        [TestCleanup]
+        public void TestCleanup()
         {
             System.Threading.Thread.CurrentThread.CurrentUICulture = new System.Globalization.CultureInfo("");
         }
