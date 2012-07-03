@@ -5,7 +5,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace DataAnnotationsExtensions.Tests.ValidationAttributes
 {
     [TestClass]
-    public class EmailAttributeTests
+    public class EmailAttributeTests : TestBase
     {
         [TestMethod]
         public void IsValidTests()

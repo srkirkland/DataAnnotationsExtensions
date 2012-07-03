@@ -6,7 +6,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace DataAnnotationsExtensions.Tests.ValidationAttributes
 {
     [TestClass]
-    public class EqualToAttributeTest
+    public class EqualToAttributeTest : TestBase
     {
 
         [TestMethod]

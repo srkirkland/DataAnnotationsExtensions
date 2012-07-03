@@ -9,7 +9,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace DataAnnotationsExtensions.Tests.ValidationAttributes
 {
     [TestClass]
-    public class MinAttributeTests
+    public class MinAttributeTests : TestBase
     {
         [TestMethod]
         public void IsValidIntegerTests()
