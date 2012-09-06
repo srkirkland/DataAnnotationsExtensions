@@ -6,7 +6,7 @@ using System.Globalization;
 namespace DataAnnotationsExtensions.Tests.ValidationAttributes
 {
     [TestClass]
-    public class UrlAttributeTests
+    public class UrlAttributeTests : TestBase
     {
         [TestMethod]
         public void IsValidTests()

@@ -6,7 +6,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace DataAnnotationsExtensions.Tests.ValidationAttributes
 {
     [TestClass]
-    public class NumericAttributeTests
+    public class NumericAttributeTests : TestBase
     {
         [TestMethod]
         public void IsValidTests()
