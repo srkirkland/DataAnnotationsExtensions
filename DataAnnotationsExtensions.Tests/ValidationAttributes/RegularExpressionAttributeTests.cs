@@ -37,26 +37,33 @@ namespace DataAnnotationsExtensions.Tests.ValidationAttributes
             Assert.IsTrue(attribute.IsValid("20 24559715 1"));
             Assert.IsTrue(attribute.IsValid("123456789"));
             Assert.IsTrue(attribute.IsValid("+1(234)4567789"));
-            Assert.IsTrue(attribute.IsValid("+0000 27 238.40320"));
-            Assert.IsTrue(attribute.IsValid("+0011 (87) 9854 23"));
-            Assert.IsTrue(attribute.IsValid("+011 (777) 854-2356"));
-            Assert.IsTrue(attribute.IsValid("+07778542356"));
+            Assert.IsTrue(attribute.IsValid("+235 7789"));
+            Assert.IsTrue(attribute.IsValid("00 27 238.40320"));
+            Assert.IsTrue(attribute.IsValid("0011 87 9854 23"));
+            Assert.IsTrue(attribute.IsValid("011 777899 854-2356"));
+            Assert.IsTrue(attribute.IsValid("0011 (87) 9854 23"));
+            Assert.IsTrue(attribute.IsValid("011 (777899) 854-2356"));
+            Assert.IsTrue(attribute.IsValid("07778542356"));
             Assert.IsTrue(attribute.IsValid("1.234.567-0000"));
             Assert.IsTrue(attribute.IsValid("1/23/56/000"));
+            Assert.IsTrue(attribute.IsValid("1/2/5/0"));
             Assert.IsTrue(attribute.IsValid("4408 0412 3456 7890"));
+            Assert.IsTrue(attribute.IsValid("00"));
+            Assert.IsTrue(attribute.IsValid(12));
             Assert.IsTrue(attribute.IsValid(123));
             Assert.IsTrue(attribute.IsValid(1234567890));
 
             Assert.IsFalse(attribute.IsValid("1/2/"));
             Assert.IsFalse(attribute.IsValid("1/23/56/000-"));
             Assert.IsFalse(attribute.IsValid("-1/23/56/000"));
-            Assert.IsFalse(attribute.IsValid("1/2/5/0"));
             Assert.IsFalse(attribute.IsValid("a"));
             Assert.IsFalse(attribute.IsValid("0"));
-            Assert.IsFalse(attribute.IsValid("00"));
             Assert.IsFalse(attribute.IsValid("+0"));
+            Assert.IsFalse(attribute.IsValid("+00 27 238.40320"));
+            Assert.IsFalse(attribute.IsValid("+0011 (87) 9854 23"));
+            Assert.IsFalse(attribute.IsValid("+011 (777899) 854-2356"));
+            Assert.IsFalse(attribute.IsValid("+07778542356"));
             Assert.IsFalse(attribute.IsValid(0));
-            Assert.IsFalse(attribute.IsValid(12));
         }
 
         [TestMethod]

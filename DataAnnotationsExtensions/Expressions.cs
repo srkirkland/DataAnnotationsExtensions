@@ -6,11 +6,22 @@
 
         /// <summary>
         /// Matches:
-        ///   Country code: {{}, 0, ..., 0000, +0, ..., +0000} (with or without a trailing break character: [-/. ])
-        ///   Area code: {(00), ..., (0000), 00, ..., 0000}
-        ///   Local: {0, ...}+ (with or without a leading break character: [-/. ])
+        ///   International dialing prefix: {{}, +, 0, 0000} (with or without a trailing break character, if not '+': [-/. ])
+        ///     > ((\+)|(0(\d+)?[-/.\s]))
+        ///   Country code: {{}, 1, ..., 999} (with or without a trailing break character: [-/. ])
+        ///     > [1-9]\d{,2}[-/.\s]?
+        ///   Area code: {(0), ..., (000000), 0, ..., 000000} (with or without a trailing break character: [-/. ])
+        ///     > ((\(\d{1,6}\)|\d{1,6})[-/.\s]?)?
+        ///   Local: {0, ...}+ (with or without a trailing break character: [-/. ])
+        ///     > (\d+[-/.\s]?)+\d+
         /// </summary>
-        public const string PhoneNumber = @"^(\+?\d{1,4}[-/.\s]?)?(\(\d{2,4}\)|\d{2,4})([-/.\s]?\d+)+$";
+        /// <remarks>
+        /// This regular expression is not complete for identifying the numerous variations that exist in phone numbers.
+        /// It provides basic assertions on the format and will help to eliminate most nonsense input but does not
+        /// guarantee validity of the value entered for any specific geography. If greater value checking is required
+        /// then consider: http://nuget.org/packages/libphonenumber-csharp.
+        /// </remarks>
+        public const string PhoneNumber = @"^((\+|(0(\d+)?[-/.\s]?))[1-9]\d{0,2}[-/.\s]?)?((\(\d{1,6}\)|\d{1,6})[-/.\s]?)?(\d+[-/.\s]?)+\d+$";
 
         /// <summary>
         /// ISO 4217:2008: Currency codes. Confirms structure not validity.
