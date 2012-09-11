@@ -2,6 +2,7 @@
 using System.Globalization;
 using System.IO;
 using System.Web;
+using DataAnnotationsExtensions.AdditionalValidators;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace DataAnnotationsExtensions.Tests.ValidationAttributes

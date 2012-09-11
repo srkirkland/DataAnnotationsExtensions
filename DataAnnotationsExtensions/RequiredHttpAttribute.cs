@@ -3,13 +3,17 @@ using System.ComponentModel.DataAnnotations;
 using System.Text.RegularExpressions;
 using System.Web;
 
-namespace DataAnnotationsExtensions
+namespace DataAnnotationsExtensions.AdditionalValidators
 {
     /// <summary>
     /// RequiredHttpAttribute class. Identical behavior to the RequiredAttribute class
     /// with the additon that it allows for bypassing validation based on the Http
     /// method of the current Http request.
     /// </summary>
+    /// <remarks>
+    /// This class will have identical behavior to the RequiredAttribute class in the scenario
+    /// where the System.Web.HttpContext.Current property returns null.
+    /// </remarks>
     [AttributeUsageAttribute(AttributeTargets.Property | AttributeTargets.Field | AttributeTargets.Parameter, AllowMultiple = false)]
     public sealed class RequiredHttpAttribute : System.ComponentModel.DataAnnotations.RequiredAttribute
     {
