@@ -19,7 +19,7 @@
         var prefix = getModelPrefix(options.element.name),
                 other = options.params.other,
                 fullOtherName = appendModelPrefix(other, prefix),
-                element = $(options.form).find(":input[name=" + fullOtherName + "]")[0];
+                element = $(options.form).find("input[name='" + fullOtherName + "']")[0];
         return element;
     }
 }
@@ -45,7 +45,7 @@ jQuery.validator.unobtrusive.adapters.add("greaterthan", ["other"], function (op
     var prefix = getModelPrefix(options.element.name),
                 other = options.params.other,
                 fullOtherName = appendModelPrefix(other, prefix),
-                element = $(options.form).find(":input[name=" + fullOtherName + "]")[0];
+                element = $(options.form).find("input[name='" + fullOtherName + "']")[0];
                 
     setValidationValues(options, "greaterThan", element);
 });
@@ -70,7 +70,7 @@ jQuery.validator.unobtrusive.adapters.add("greaterthanorequalto", ["other"], fun
     var prefix = getModelPrefix(options.element.name),
                 other = options.params.other,
                 fullOtherName = appendModelPrefix(other, prefix),
-                element = $(options.form).find(":input[name=" + fullOtherName + "]")[0];
+                element = $(options.form).find("input[name='" + fullOtherName + "']")[0];
                 
 
     setValidationValues(options, "greaterThanOrEqualTo", element);
