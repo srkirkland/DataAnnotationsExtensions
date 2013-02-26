@@ -2,7 +2,7 @@
 <package xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <metadata xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
     <id>DataAnnotationsExtensions</id>
-    <version>0.6.0.0</version>
+    <version>0.6.0.2</version>
     <authors>Scott Kirkland</authors>
     <owners>Scott Kirkland</owners>    
     <licenseUrl>https://github.com/srkirkland/DataAnnotationsExtensions/raw/master/LICENSE.txt</licenseUrl>
@@ -10,10 +10,13 @@
     <iconUrl>http://dataannotationsextensions.org/Images/CheckIcon.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>Validation attributes that can be used in any .NET 4.0 project to supplement the existing Data Annotations attributes. 
-    If you are using MVC3 and also want client validation, use the DataAnnotationsExtensions.MVC3 package.</description>
+    If you are using MVC3 and also want client validation, use the DataAnnotationsExtensions.MVC3 package.
+  
+  This is a branch from the main project where rschiefer added GreaterThan &amp; GreaterThanOrEqualTo validators.</description>
     <tags>ASP.NET Validation</tags>
   </metadata>
   <files xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
-      <file src="../../artifacts/DataAnnotationsExtensions.dll" target="lib\NETFramework40" />
+      <file src="..\..\artifacts\DataAnnotationsExtensions.ClientValidation.dll" target="lib\NETFramework40" />
+      <file src="..\..\artifacts\DataAnnotationsExtensions.dll" target="lib\NETFramework40" />
   </files>
 </package>
