@@ -17,6 +17,11 @@ namespace DataAnnotationsExtensions.Tests.ValidationAttributes
             Assert.IsTrue(attribute.IsValid("http://foo.bar"));
             Assert.IsTrue(attribute.IsValid("https://foo.bar"));
             Assert.IsTrue(attribute.IsValid("ftp://foo.bar"));
+            Assert.IsTrue(attribute.IsValid("http://foo.bar:12345"));
+            Assert.IsTrue(attribute.IsValid("http://localhost"));
+            Assert.IsTrue(attribute.IsValid("http://local-host"));
+            Assert.IsTrue(attribute.IsValid("http://localhost:67890"));
+            Assert.IsTrue(attribute.IsValid("http://localhost:99999/foo.png"));
             Assert.IsFalse(attribute.IsValid("file:///foo.bar"));
             Assert.IsFalse(attribute.IsValid("http://user%password@foo.bar/"));
             Assert.IsFalse(attribute.IsValid("foo.png"));
@@ -31,8 +36,13 @@ namespace DataAnnotationsExtensions.Tests.ValidationAttributes
             Assert.IsTrue(attribute.IsValid("foo.bar"));
             Assert.IsTrue(attribute.IsValid("www.foo.bar"));
             Assert.IsTrue(attribute.IsValid("http://foo.bar"));
+            Assert.IsTrue(attribute.IsValid("http://localhost"));
+            Assert.IsTrue(attribute.IsValid("localhost"));
+            Assert.IsTrue(attribute.IsValid("localhost:12345"));
             Assert.IsFalse(attribute.IsValid("htp://foo.bar"));
-            
+            Assert.IsFalse(attribute.IsValid("-localhost"));
+            Assert.IsFalse(attribute.IsValid(".localhost"));
+            Assert.IsFalse(attribute.IsValid("1localhost"));
         }
 
         [TestMethod]
@@ -43,6 +53,8 @@ namespace DataAnnotationsExtensions.Tests.ValidationAttributes
             Assert.IsTrue(attribute.IsValid(null));  // Optional values are always valid
             Assert.IsTrue(attribute.IsValid("foo.bar"));
             Assert.IsTrue(attribute.IsValid("www.foo.bar"));
+            Assert.IsTrue(attribute.IsValid("localhost"));
+            Assert.IsFalse(attribute.IsValid("https://localhost"));
             Assert.IsFalse(attribute.IsValid("http://foo.bar"));
             Assert.IsFalse(attribute.IsValid("htp://foo.bar"));
 
