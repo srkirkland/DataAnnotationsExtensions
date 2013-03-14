@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations;
 using System.Text.RegularExpressions;
 using System.Web;
 
-namespace DataAnnotationsExtensions.AdditionalValidators
+namespace DataAnnotationsExtensions.ServerSideValidators
 {
     /// <summary>
     /// RequiredHttpAttribute class. Identical behavior to the RequiredAttribute class
