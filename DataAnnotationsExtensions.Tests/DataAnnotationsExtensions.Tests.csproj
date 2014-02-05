@@ -67,6 +67,7 @@
     <Compile Include="Doubles\HttpPostedFileBaseStub.cs" />
     <Compile Include="ValidationAttributes\RequiredHttpAttributeTests.cs" />
     <Compile Include="TestBase.cs" />
+    <Compile Include="ValidationAttributes\NotNullOrZeroAttributeTests.cs" />
     <Compile Include="ValidationAttributes\RegularExpressionAttributeTests.cs" />
     <Compile Include="ValidationAttributes\YearAttributeTests.cs" />
     <Compile Include="ValidationAttributes\CreditCardAttributeTests.cs" />
