@@ -1,0 +1,46 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Data Annotations Extensions: @ViewBag.Title</title>
+    <link href="@Url.Content("~/Css/Site.css")" rel="stylesheet" type="text/css" />
+    <script src="@Url.Content("~/Scripts/jquery-1.5.min.js")" type="text/javascript"></script>
+    <script src="@Url.Content("~/Scripts/jquery.validate.js")" type="text/javascript"></script>
+    <script src="@Url.Content("~/Scripts/jquery.validate.unobtrusive.js")" type="text/javascript"></script>
+</head>
+
+<body>
+    <div class="page">
+
+        <div id="header">
+            <div id="title">
+                <h1>Data Annotations Extensions</h1>
+            </div>
+
+            <div id="logindisplay">
+                &nbsp;
+            </div>
+
+            <div id="menucontainer">
+
+                <ul id="menu">
+                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                    <li>@Html.ActionLink("Demos", "Demos", "Home")</li>
+                    <li>@Html.ActionLink("About", "About", "Home")</li>
+                </ul>
+
+            </div>
+        </div>
+
+        <div id="main">
+            <div id="message">
+                @TempData["Message"]
+            </div>
+            @RenderBody()
+            <div id="footer">
+            </div>
+        </div>
+    </div>
+
+    <a href="http://github.com/srkirkland/DataAnnotationsExtensions"><img style="position: absolute; top: 0; left: 0; border: 0;" src="https://assets1.github.com/img/edc6dae7a1079163caf7f17c60495bbb6d027c93?repo=&url=http%3A%2F%2Fs3.amazonaws.com%2Fgithub%2Fribbons%2Fforkme_left_green_007200.png&path=" alt="Fork me on GitHub"></a>
+</body>
+</html>

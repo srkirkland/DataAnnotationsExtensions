@@ -1,0 +1,5 @@
+﻿@{var message = TempData["Message"] as string;}
+
+@if (!string.IsNullOrWhiteSpace(message)) { 
+    <p class="info">@TempData["Message"]</p>
+}

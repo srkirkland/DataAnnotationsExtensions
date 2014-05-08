@@ -1,6 +1,16 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual Studio 2010
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30324.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Build", "Build", "{0FB0F3C0-B85B-4EBB-877C-A604F9AC7125}"
+	ProjectSection(SolutionItems) = preProject
+		Build.cmd = Build.cmd
+		Build\Build.proj = Build\Build.proj
+		Build\Build.tasks = Build\Build.tasks
+		Build\CommonAssemblyInfo.cs = Build\CommonAssemblyInfo.cs
+	EndProjectSection
+EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAnnotationsExtensions.Web", "DataAnnotationsExtensions.Web\DataAnnotationsExtensions.Web.csproj", "{16249BAA-A6E2-4D9E-83E1-FF83C8564A83}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAnnotationsExtensions.Tests", "DataAnnotationsExtensions.Tests\DataAnnotationsExtensions.Tests.csproj", "{82A01EA4-F886-4C09-9082-FCD3C63A900D}"
@@ -12,14 +22,6 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAnnotationsExtensions.ClientValidation", "DataAnnotationsExtensions.ClientValidation\DataAnnotationsExtensions.ClientValidation.csproj", "{CE731EE1-C6D0-4183-803D-14729BBE2895}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAnnotationsExtensions.NuGet", "DataAnnotationsExtensions.NuGet\DataAnnotationsExtensions.NuGet.csproj", "{5700F8A2-D2CB-4797-8513-61164DCC3A55}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Build", "Build", "{0FB0F3C0-B85B-4EBB-877C-A604F9AC7125}"
-	ProjectSection(SolutionItems) = preProject
-		Build.cmd = Build.cmd
-		Build\Build.proj = Build\Build.proj
-		Build\Build.tasks = Build\Build.tasks
-		Build\CommonAssemblyInfo.cs = Build\CommonAssemblyInfo.cs
-	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
