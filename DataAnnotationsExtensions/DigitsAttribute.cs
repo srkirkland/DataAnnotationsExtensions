@@ -1,6 +1,7 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
 using DataAnnotationsExtensions.Resources;
+using System.Text.RegularExpressions;
 
 namespace DataAnnotationsExtensions
 {
@@ -26,11 +27,11 @@ namespace DataAnnotationsExtensions
         {
             if (value == null) return true;
 
-            long retNum;
-
-            var parseSuccess = long.TryParse(Convert.ToString(value), out retNum);
-
-            return parseSuccess && retNum >= 0;
+			Regex expression = new Regex (@"^[0-9]*$");
+			if (value is string)
+				return expression.IsMatch (value as string);
+			else
+            	return false;
         }
     }
 }
