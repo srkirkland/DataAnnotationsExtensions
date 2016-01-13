@@ -1,6 +1,7 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
+using System.Text.RegularExpressions;
 using DataAnnotationsExtensions.Resources;
 
 namespace DataAnnotationsExtensions
@@ -36,9 +37,21 @@ namespace DataAnnotationsExtensions
                 return false;
             }
 
+            if (!new Regex("[0-9\\-]+").IsMatch(ccValue))
+            {
+                return false;
+            }
+
             ccValue = ccValue.Replace("-", string.Empty).Replace(" ", string.Empty);
 
             if (string.IsNullOrEmpty(ccValue)) return false; //Don't accept only dashes/spaces
+
+            // Basing min and max length on
+            // http://developer.ean.com/general_info/Valid_Credit_Card_Types
+            if (ccValue.Length < 13 || ccValue.Length > 19)
+            {
+                return false;
+            }
 
             int checksum = 0;
             bool evenDigit = false;

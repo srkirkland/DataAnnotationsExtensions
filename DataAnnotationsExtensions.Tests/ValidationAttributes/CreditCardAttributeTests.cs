@@ -24,7 +24,9 @@ namespace DataAnnotationsExtensions.Tests.ValidationAttributes
 			Assert.IsFalse(attribute.IsValid("0000000000000001"));   // Bad checksum
             Assert.IsFalse(attribute.IsValid("0000-0000-0000-0001")); 
             Assert.IsFalse(attribute.IsValid("1234567890123456"));
+            Assert.IsFalse(attribute.IsValid("558987100150")); //too short
 			Assert.IsFalse(attribute.IsValid("---"));
+			Assert.IsFalse(attribute.IsValid("AA17123456789112"));
 			Assert.IsFalse(attribute.IsValid("4417123456789112"));
 			Assert.IsFalse(attribute.IsValid("4408041234567890"));
 			Assert.IsFalse(attribute.IsValid("4408041234567890ab"));
