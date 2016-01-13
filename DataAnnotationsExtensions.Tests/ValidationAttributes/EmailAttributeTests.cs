@@ -15,10 +15,11 @@ namespace DataAnnotationsExtensions.Tests.ValidationAttributes
             Assert.IsTrue(attribute.IsValid(null)); // Don't check for required
             Assert.IsTrue(attribute.IsValid("foo@bar.com"));
             Assert.IsTrue(attribute.IsValid("foo.bar@baz.com"));
+            Assert.IsTrue(attribute.IsValid("foo.bar@baz.co.uk"));
             Assert.IsTrue(attribute.IsValid("foo%bar@baz.com"));
             Assert.IsFalse(attribute.IsValid("foo"));
             Assert.IsFalse(attribute.IsValid("foo@"));
-            Assert.IsFalse(attribute.IsValid("foo@bar"));
+            Assert.IsFalse(attribute.IsValid("foo.bar@baz.co..uk"));
         }
 
         [TestMethod]
