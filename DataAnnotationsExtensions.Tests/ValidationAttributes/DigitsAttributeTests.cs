@@ -18,6 +18,8 @@ namespace DataAnnotationsExtensions.Tests.ValidationAttributes
             Assert.IsTrue(attribute.IsValid("12345"));
             Assert.IsTrue(attribute.IsValid(14));
             Assert.IsTrue(attribute.IsValid("6708025174"));
+            //really big number
+            Assert.IsTrue(attribute.IsValid("23748962347868791263748163874628397458217396478192354987253468127354782163478623894761239874523"));
             Assert.IsTrue(attribute.IsValid(1000000000000000000)); //big number
             Assert.IsFalse(attribute.IsValid(14.50));
             Assert.IsFalse(attribute.IsValid(-10)); //Does not allow negative numbers
