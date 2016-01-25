@@ -75,7 +75,9 @@ namespace DataAnnotationsExtensions.Tests.ValidationAttributes
             {
                 RequestType = "Get"
             };
-            HttpContext context = new HttpContext(request, null);
+
+            HttpResponse response = new HttpResponse(HttpWriter.Null);
+            HttpContext.Current = new HttpContext(request, response);
 
             Assert.IsTrue(attribute.IsValid("A"));
             Assert.IsTrue(attribute.IsValid("ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"));
