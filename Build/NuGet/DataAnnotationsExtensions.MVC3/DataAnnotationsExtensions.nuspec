@@ -19,6 +19,6 @@
   </metadata>
   <files>
     <file src="content\App_Start\RegisterClientValidationExtensions.cs.pp" target="content\App_Start\RegisterClientValidationExtensions.cs.pp" />
-    <file src="..\..\artifacts\DataAnnotationsExtensions.ClientValidation.dll" target="lib\NETFramework40\DataAnnotationsExtensions.ClientValidation.dll" />
+    <file src="..\..\..\DataAnnotationsExtensions\bin\Release\DataAnnotationsExtensions.ClientValidation.dll" target="lib\NETFramework40\DataAnnotationsExtensions.ClientValidation.dll" />
   </files>
 </package>
