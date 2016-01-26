@@ -134,7 +134,7 @@
   -->
   <Target Name="AfterBuild" Condition=" '$(Configuration)' == 'Release'">
 
-    <Exec Command="nuget pack -IncludeReferencedProjects -Prop Configuration=Release"></Exec>
+    <Exec Command="nuget pack DataAnnotationsExtensions.ClientValidation.csproj -IncludeReferencedProjects -Prop Configuration=Release"></Exec>
 
   </Target>
 </Project>

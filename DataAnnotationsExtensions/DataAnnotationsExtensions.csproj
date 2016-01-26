@@ -92,7 +92,7 @@
   -->
   <Target Name="AfterBuild" Condition=" '$(Configuration)' == 'Release'">
 
-    <Exec Command="nuget pack -Prop Configuration=Release"></Exec>
+    <Exec Command="nuget pack DataAnnotationsExtensions.csproj -Prop Configuration=Release"></Exec>
 
   </Target>
 </Project>
