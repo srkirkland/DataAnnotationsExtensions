@@ -39,8 +39,6 @@ namespace DataAnnotationsExtensions.Web
 
             ViewEngines.Engines.Clear();
             ViewEngines.Engines.Add(new RazorViewEngine());
-
-            DataAnnotationsModelValidatorProviderExtensions.RegisterValidationExtensions();
         }
     }
 }
