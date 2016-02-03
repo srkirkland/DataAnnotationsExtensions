@@ -16,6 +16,9 @@
     <releaseNotes>See https://github.com/srkirkland/DataAnnotationsExtensions/wiki/Version-History</releaseNotes>
     <tags>ASP.NET Validation</tags>
     <copyright>Copyright 2016</copyright>
+    <dependencies>
+      <dependency id="WebActivator" version="1.2.0" />
+    </dependencies>
   </metadata>
   <files>
     <file src="..\DataAnnotationsExtensions.NuGet\RegisterClientValidationExtensions.cs.pp" target="content\App_Start\RegisterClientValidationExtensions.cs.pp" />
