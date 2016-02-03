@@ -8,6 +8,7 @@ namespace DataAnnotationsExtensions.ClientValidation.Rules
         {
             ErrorMessage = errorMessage;
             ValidationType = "range";
+            ValidationParameters["min"] = double.MinValue;
             ValidationParameters["max"] = max;
         }
     }
