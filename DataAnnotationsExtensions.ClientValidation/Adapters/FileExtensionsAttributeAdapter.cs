@@ -14,7 +14,8 @@ namespace DataAnnotationsExtensions.ClientValidation.Adapters
 
         public override IEnumerable<ModelClientValidationRule> GetClientValidationRules()
         {
-            return new[] { new ModelClientValidationFileExtensionsRule(ErrorMessage, Attribute.Extensions) };
+            var extensionsRegex = string.Format(@"^.*\.({0})$", Attribute.Extensions.Replace(",", "|"));
+            return new[] { new ModelClientValidationFileExtensionsRule(ErrorMessage, extensionsRegex) };
         }
     }
 }
