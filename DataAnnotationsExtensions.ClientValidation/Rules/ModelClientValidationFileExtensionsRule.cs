@@ -4,11 +4,11 @@ namespace DataAnnotationsExtensions.ClientValidation.Rules
 {
     public class ModelClientValidationFileExtensionsRule : ModelClientValidationRule
     {
-        public ModelClientValidationFileExtensionsRule(string errorMessage, string extensions)
+        public ModelClientValidationFileExtensionsRule(string errorMessage, string extensionsRegex)
         {
             ErrorMessage = errorMessage;
-            ValidationType = "accept";
-            ValidationParameters["exts"] = extensions;
+            ValidationType = "regex";
+            ValidationParameters["pattern"] = extensionsRegex; //match extensions at end of string
         }
     }
 }

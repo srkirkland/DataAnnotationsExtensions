@@ -7,7 +7,7 @@ namespace DataAnnotationsExtensions.Web.Controllers
         protected override void AddMessage()
         {
             Message =
-                "Both fields expect a date formatted string.  The DateAsString field shows server-side validation separate from data type checking.";
+                "Both fields expect a date formatted string.  The DateAsString field shows how you can validate a string instead of a DateTime object. If you use [Date] on a DateTime object it will be the same as just setting the data type with [DataType(DataType.Date)]";
         }
     }
 }

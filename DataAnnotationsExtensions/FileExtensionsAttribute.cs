@@ -14,7 +14,7 @@ namespace DataAnnotationsExtensions
         public string Extensions { get; private set; }
 
         /// <summary>
-        /// Provide the allowed file extensions, seperated via "|" (or a comma, ","), defaults to "png|jpe?g|gif" 
+        /// Provide the allowed file extensions, seperated via comma or pipe, defaults to "png,jpeg,jpg,gif" 
         /// </summary>
         public FileExtensionsAttribute(string allowedExtensions = "png,jpg,jpeg,gif")
             : base("fileextension")

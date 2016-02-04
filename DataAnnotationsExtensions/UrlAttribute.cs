@@ -34,7 +34,7 @@ namespace DataAnnotationsExtensions
             }
         }
 
-        public UrlAttribute(UrlOptions urlOptions = UrlOptions.RequireProtocol) : base(DataType.Url)
+        public UrlAttribute(UrlOptions urlOptions = UrlOptions.RequireProtocol) : base(DataType.Text)
         {
             _urlOptions = urlOptions;
 

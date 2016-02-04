@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Web.Mvc;
 using DataAnnotationsExtensions.ClientValidation.Rules;
 
@@ -13,7 +14,12 @@ namespace DataAnnotationsExtensions.ClientValidation.Adapters
 
         public override IEnumerable<ModelClientValidationRule> GetClientValidationRules()
         {
-            return new[] { new ModelClientValidationDateRule(ErrorMessage) };
+            if (Metadata.ModelType != typeof (DateTime)) //only add validation for non
+            {
+                return new[] {new ModelClientValidationDateRule(ErrorMessage)};
+            }
+
+            return new ModelClientValidationRule[0];
         }
     }
 }

@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations;
 using System.Text.RegularExpressions;
 using System.Web;
 
-namespace DataAnnotationsExtensions.ServerSideValidators
+namespace DataAnnotationsExtensions.ServerOnlyValidators
 {
     /// <summary>
     /// RequiredHttpAttribute class. Identical behavior to the RequiredAttribute class
@@ -14,7 +14,7 @@ namespace DataAnnotationsExtensions.ServerSideValidators
     /// This class will have identical behavior to the RequiredAttribute class in the scenario
     /// where the System.Web.HttpContext.Current property returns null.
     /// </remarks>
-    [AttributeUsageAttribute(AttributeTargets.Property | AttributeTargets.Field | AttributeTargets.Parameter, AllowMultiple = false)]
+    [AttributeUsage(AttributeTargets.Property | AttributeTargets.Field | AttributeTargets.Parameter, AllowMultiple = false)]
     public sealed class RequiredHttpAttribute : System.ComponentModel.DataAnnotations.RequiredAttribute
     {
         /// <summary>
