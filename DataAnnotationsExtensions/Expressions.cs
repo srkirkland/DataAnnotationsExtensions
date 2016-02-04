@@ -22,6 +22,11 @@
         /// then consider: http://nuget.org/packages/libphonenumber-csharp.
         /// </remarks>
         public const string PhoneNumber = @"^((\+|(0(\d+)?[-/.\s]?))[1-9]\d{0,2}[-/.\s]?)?((\(\d{1,6}\)|\d{1,6})[-/.\s]?)?(\d+[-/.\s]?)+\d+$";
+        
+        /// <summary>
+        /// Matches US Zip codes, for example 90210 or 90210-1234.
+        /// </summary>
+        public const string USZipCode = @"^\d{5}$|^\d{5}-\d{4}$";
 
         /// <summary>
         /// ISO 4217:2008: Currency codes. Confirms structure not validity.
