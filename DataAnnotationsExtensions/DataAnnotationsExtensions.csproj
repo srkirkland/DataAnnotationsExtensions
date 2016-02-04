@@ -68,12 +68,12 @@
     <Compile Include="MinAttribute.cs" />
     <Compile Include="NumericAttribute.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="RequiredHttpAttribute.cs" />
     <Compile Include="Resources\ValidatorResources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>ValidatorResources.resx</DependentUpon>
     </Compile>
+    <Compile Include="ServerOnlyValidators\RequiredHttpAttribute.cs" />
     <Compile Include="UrlAttribute.cs" />
     <Compile Include="UrlOptions.cs" />
     <Compile Include="YearAttribute.cs" />

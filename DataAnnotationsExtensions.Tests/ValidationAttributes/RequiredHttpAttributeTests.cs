@@ -2,7 +2,7 @@
 using System.Globalization;
 using System.IO;
 using System.Web;
-using DataAnnotationsExtensions.ServerSideValidators;
+using DataAnnotationsExtensions.ServerOnlyValidators;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace DataAnnotationsExtensions.Tests.ValidationAttributes
