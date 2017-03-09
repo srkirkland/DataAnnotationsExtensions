@@ -4,4 +4,4 @@ The core library provides server-side validation attributes that can be used in 
 
 All validation attributes are covered with unit tests and also have a dedicated controller in the included sample website (click Demos to see a demonstration of each validation attribute). 
 
-Please see the project website for details: http://dataannotationsextensions.org/
+Please see the project website for details: https://dataannotationsextensions.apphb.com/
