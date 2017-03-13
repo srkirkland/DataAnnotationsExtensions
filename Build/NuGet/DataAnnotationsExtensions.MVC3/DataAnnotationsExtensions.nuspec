@@ -14,7 +14,7 @@
     <tags>ASP.NET Validation MVC MVC3</tags>
     <dependencies>
       <dependency id="DataAnnotationsExtensions" version="1.1.2" />
-      <dependency id="WebActivator" version="1.2.0.0" />
+      <dependency id="WebActivatorEx" version="2.1.0" />
     </dependencies>
   </metadata>
   <files>
