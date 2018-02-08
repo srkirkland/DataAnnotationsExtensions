@@ -6,8 +6,8 @@
     <authors>Scott Kirkland</authors>
     <owners>Scott Kirkland</owners>
     <licenseUrl>https://github.com/srkirkland/DataAnnotationsExtensions/raw/master/LICENSE.txt</licenseUrl>
-    <projectUrl>http://dataannotationsextensions.org</projectUrl>
-    <iconUrl>http://dataannotationsextensions.org/Images/CheckIcon.png</iconUrl>
+    <projectUrl>https://dataannotationsextensions.apphb.com/</projectUrl>
+    <iconUrl>https://dataannotationsextensions.apphb.com/Images/CheckIcon.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>Validation attributes that can be used in any .NET 4.0 project to supplement the existing Data Annotations attributes. 
     If you are using MVC3 and also want client validation, use the DataAnnotationsExtensions.MVC3 package.</description>

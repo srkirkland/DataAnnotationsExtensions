@@ -6,8 +6,8 @@
     <authors>Scott Kirkland</authors>
     <owners>Scott Kirkland</owners>
     <licenseUrl>https://github.com/srkirkland/DataAnnotationsExtensions/raw/master/LICENSE.txt</licenseUrl>
-    <projectUrl>http://dataannotationsextensions.org</projectUrl>
-    <iconUrl>http://dataannotationsextensions.org/Images/CheckIcon.png</iconUrl>
+    <projectUrl>https://dataannotationsextensions.apphb.com/</projectUrl>
+    <iconUrl>https://dataannotationsextensions.apphb.com/Images/CheckIcon.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>Validation attributes that extend Data Annotations and provide integrated server and client side validation (using unobtrusive jquery validation).</description>
     <releaseNotes>See https://github.com/srkirkland/DataAnnotationsExtensions/wiki/Version-History</releaseNotes>
