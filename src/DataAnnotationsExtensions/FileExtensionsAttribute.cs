@@ -9,6 +9,10 @@ using Microsoft.AspNetCore.Http;
 
 namespace DataAnnotationsExtensions
 {
+    /// <summary>
+    /// Can be applied to string or objects that implement IFormFile
+    /// See: https://docs.microsoft.com/en-us/aspnet/core/mvc/models/file-uploads for info on file uploads in aspnet core
+    /// </summary>
     [AttributeUsage(AttributeTargets.Property, AllowMultiple = false)]
     public class FileExtensionsAttribute : DataTypeAttribute
     {
