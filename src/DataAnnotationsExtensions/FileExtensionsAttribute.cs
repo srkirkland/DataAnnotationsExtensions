@@ -5,6 +5,7 @@ using System.IO;
 using System.Linq;
 using DataAnnotationsExtensions.Resources;
 using System.Web;
+using Microsoft.AspNetCore.Http;
 
 namespace DataAnnotationsExtensions
 {
@@ -40,9 +41,9 @@ namespace DataAnnotationsExtensions
             }
 
             string valueAsString;
-            if (value != null && value is HttpPostedFileBase)
+            if (value != null && value is IFormFile)
             {
-                valueAsString = (value as HttpPostedFileBase).FileName;
+                valueAsString = (value as IFormFile).FileName;
             }
             else
             {
