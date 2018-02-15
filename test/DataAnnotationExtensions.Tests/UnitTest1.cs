@@ -2,12 +2,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace DataAnnotationExtensions.Tests
 {
-    [TestClass]
-    public class UnitTest1
-    {
-        [TestMethod]
-        public void TestMethod1()
-        {
-        }
+    public static class ErrorResources {
+        public static string ErrorMessage = "error message";
     }
 }
