@@ -1,11 +1,10 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.Globalization;
-using DataAnnotationExtensions.Tests;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace DataAnnotationsExtensions.Tests.ValidationAttributes
 {
-	[TestClass]
+    [TestClass]
 	public class YearAttributeTests
 	{
 		[TestMethod]

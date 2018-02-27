@@ -1,6 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.Globalization;
-using DataAnnotationExtensions.Tests;
 using Microsoft.AspNetCore.Http.Internal;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
