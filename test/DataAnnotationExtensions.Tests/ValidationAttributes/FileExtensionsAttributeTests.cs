@@ -1,7 +1,8 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.Globalization;
+using DataAnnotationExtensions.Tests;
+using Microsoft.AspNetCore.Http.Internal;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using DataAnnotationsExtensions.Tests.Doubles;
 
 namespace DataAnnotationsExtensions.Tests.ValidationAttributes
 {
@@ -17,6 +18,7 @@ namespace DataAnnotationsExtensions.Tests.ValidationAttributes
         [TestMethod]
         public void IsValidWithNoArgumentTests()
         {
+            var type = typeof(Microsoft.AspNetCore.Http.IFormFile);
             var attribute = new FileExtensionsAttribute();
 
             Assert.IsTrue(attribute.IsValid(null));  // Optional values are always valid
@@ -24,13 +26,13 @@ namespace DataAnnotationsExtensions.Tests.ValidationAttributes
             Assert.IsTrue(attribute.IsValid("foo.jpeg"));
             Assert.IsTrue(attribute.IsValid("foo.jpg"));
             Assert.IsTrue(attribute.IsValid("foo.gif"));
-            Assert.IsTrue(attribute.IsValid(new HttpPostedFileBaseStub("foo.gif")));
+            Assert.IsTrue(attribute.IsValid(new FormFile(null, 0, 0, "foo.gif", "food.gif")));
             Assert.IsTrue(attribute.IsValid(@"C:\Foo\bar.png"));
             Assert.IsFalse(attribute.IsValid("foo"));
             Assert.IsFalse(attribute.IsValid("foo.doc"));
             Assert.IsFalse(attribute.IsValid("foo.txt"));
             Assert.IsFalse(attribute.IsValid("foo.png.txt"));
-            Assert.IsFalse(attribute.IsValid(new HttpPostedFileBaseStub("foo.png.txt")));
+            Assert.IsFalse(attribute.IsValid(new FormFile(null, 0, 0, "foo.png.txt", "food.png.txt")));
         }
 
         [TestMethod]
@@ -43,12 +45,12 @@ namespace DataAnnotationsExtensions.Tests.ValidationAttributes
             Assert.IsTrue(attribute.IsValid("foo.doc"));
             Assert.IsTrue(attribute.IsValid("foo.docx"));
             Assert.IsTrue(attribute.IsValid("foo.rtf"));
-            Assert.IsTrue(attribute.IsValid(new HttpPostedFileBaseStub("foo.rtf")));
+            Assert.IsTrue(attribute.IsValid(new FormFile(null, 0, 0, "foo.rtf", "food.rtf")));
             Assert.IsTrue(attribute.IsValid(@"C:\Foo\bar.pdf"));
             Assert.IsFalse(attribute.IsValid("foo"));
             Assert.IsFalse(attribute.IsValid("foo.png"));
             Assert.IsFalse(attribute.IsValid("foo.jpeg"));
-            Assert.IsFalse(attribute.IsValid(new HttpPostedFileBaseStub("foo.jpeg")));
+            Assert.IsFalse(attribute.IsValid(new FormFile(null, 0, 0, "foo.jpeg", "food.jpeg")));
             Assert.IsFalse(attribute.IsValid("foo.doc.txt"));
         }
 

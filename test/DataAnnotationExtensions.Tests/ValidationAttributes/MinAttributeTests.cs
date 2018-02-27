@@ -4,6 +4,7 @@ using System.ComponentModel.DataAnnotations;
 using System.Globalization;
 using System.Linq;
 using System.Text;
+using DataAnnotationExtensions.Tests;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace DataAnnotationsExtensions.Tests.ValidationAttributes

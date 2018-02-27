@@ -2,6 +2,7 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 using System.Globalization;
+using DataAnnotationExtensions.Tests;
 
 namespace DataAnnotationsExtensions.Tests.ValidationAttributes
 {

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
 using System.Globalization;
+using DataAnnotationExtensions.Tests;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace DataAnnotationsExtensions.Tests.ValidationAttributes
