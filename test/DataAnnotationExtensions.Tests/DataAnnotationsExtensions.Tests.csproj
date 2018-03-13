@@ -22,9 +22,18 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>ErrorResources.resx</DependentUpon>
     </Compile>
+    <Compile Update="ErrorResources.es-MX.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>ErrorResources.es-MX.resx</DependentUpon>
+    </Compile>
   </ItemGroup>
 
   <ItemGroup>
+    <EmbeddedResource Update="ErrorResources.es-MX.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>ErrorResources.es-MX.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Update="ErrorResources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>ErrorResources.Designer.cs</LastGenOutput>
