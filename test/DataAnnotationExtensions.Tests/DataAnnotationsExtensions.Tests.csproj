@@ -16,4 +16,19 @@
     <ProjectReference Include="..\..\src\DataAnnotationsExtensions\DataAnnotationsExtensions.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Compile Update="ErrorResources.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>ErrorResources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="ErrorResources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>ErrorResources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+
 </Project>
